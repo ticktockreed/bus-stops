@@ -1,16 +1,13 @@
-#Scripts folder
+#Styles folder
 
 ##Folder Structure
 
-	|-- scripts
-	|   |-- libs
-	|   |   |-- modernizr.js
-	|   |   |-- selectivizr.js
-	|   |-- plugins
-	|   |   |-- jquery.validate.js
-	|   |-- app.js
-	|   |-- base.js
-	|   |-- jquery.ourplugin.0.1.js
+	|-- styles
+	|   |-- CSS
+	|   |   |-- min
+    |   |   |   |-- global.min.css
+	|   |-- SASS
+    |   |   |-- global.scss
 
 All javascript files go in here.
 
@@ -19,18 +16,10 @@ All javascript files go in here.
 `|-- plugins` contains all plugins used in the project that are not built by us.
 
 `app.js` contains all code functions specific to this project that are not better included as a separate plugin file.
-*-- please write all functions with variable name and function name. For example*
 
-	define_console_log: function() define_console_log {} 
-
-`base.js` is common to all projects and includes comonly used functions and variables such as: 
-
+`global.js` is common to all projects and includes comonly used functions such as: 
 * The location of html snippets file (pulled in via AJAX)
 * Console log definition (to prevent JS from breaking in lt IE8)
-* Placeholder fallback 
-
-And anything else usefull for all of our projects
-
 
 `jquery.ourplugin.0.1.js` is an example of a Zone created plugin. 
 

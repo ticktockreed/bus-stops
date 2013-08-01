@@ -11,11 +11,15 @@ var app;
   ----------------------------------------------------------------------------- */
 
       CONSTANTS: {
+
         // Place sitewide global variables here
+
       },
 
       animation : {
+
         // Place common animation variables here - eg speed, easing etc.
+        
       },
 
       /* FUNCTIONS
@@ -38,6 +42,8 @@ var app;
     },
 
     firstFunction: function() firstFunction {
+
+
 
     }
 

@@ -1,12 +1,31 @@
 # Zone Boilerplate #
 
-This is the base repo for all Zone templates.
+## Folder Structure
 
-The snippets need to be just HTML with meaningful text inside the elements.
-Keep the markup as lean as possible. ONLY the bare essentials.
-Don't add classes - we'll return to these when they have been fleshed out a little more.
+    |-- scripts
+    |-- snippets
+    |-- styles
+    |   |-- favicon.ico
+    |   |-- humans.txt
+    |   |-- index.html
 
-Please comment at the top of the file suggesting the snippets use and any interesting information.
+`|-- scripts` contains ALL javascript files.
 
-We'll open these up to discussion within codebase.
-We'll open up discussion about each file within the discussions tab of the repository in codebase.
+`|-- snippets` contains HTML snippets.*
+
+`|-- styles` contains all assets used in styling the site; CSS, SASS, SVG, images etc.
+
+`favicon.ico` is the basic favicon for the site - don't forget it.
+
+`humans.txt` tells us who has worked on the project, who helped, and what technologies were used.
+
+`index.html` is the basic page markup (distilled from the HTML5 Boilerplate).
+
+** Please view README.md files within each folder for more info **
+
+
+_____
+
+**Notes**
+
+*not sure if this should be in here
