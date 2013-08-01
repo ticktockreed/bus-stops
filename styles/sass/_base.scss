@@ -1,0 +1,33 @@
+/**
+* Base Variables
+*
+* $author                       Your name
+* $url                          http://www.thisiszone.com/
+* $copyright                    Copyright (c) 2012, thisiszone.com. All rights reserved.
+* $version                      1.0
+*/
+
+// Colour palette ----------------------------------------------------------------
+
+$color-indigo:                  #424297;
+$color-magenta:                 #EE3D96;
+$color-grey-dark:               #323230;
+
+
+// Colour Context ----------------------------------------------------------------
+
+$color-text:                    $color-grey-dark;
+$color-heading:                 $color-indigo;
+$color-link:                    $color-magenta;
+$color-link-hover:              $color-link;
+$color-link-visited:            $color-link;
+
+// Fonts  ----------------------------------------------------------------------
+
+$font-copy:                     helvetica,arial,clean,sans-serif;
+$font-heading:                  "Bliss Regular", 'Gill Sans', 'Helvetica Neue', Arial, sans-serif;
+
+// Spacing -------------------------------------------------------------------------
+
+$spacing-vertical:              1.4em;
+$spacing-vertical-small:        $spacing-vertical / 2;

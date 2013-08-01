@@ -3,26 +3,25 @@
 ##Folder Structure
 
 	|-- styles
-	|   |-- CSS
+	|   |-- css
 	|   |   |-- min
     |   |   |   |-- global.min.css
-	|   |-- SASS
+	|   |-- sass
     |   |   |-- global.scss
+    |   |-- fonts
+    |   |-- img
+    |   |-- svg
 
-All javascript files go in here.
+This folder contains ALL styles and assets used in the site or app.
 
-`|-- libs` is for all libraries included in the project. 
+`|   |-- css` contains only compiled and minified css files used in the site
 
-`|-- plugins` contains all plugins used in the project that are not built by us.
+`|   |-- sass` contains all scss files used before compiling
 
-`app.js` contains all code functions specific to this project that are not better included as a separate plugin file.
+`|   |-- fonts` contains all fonts hosted on the site
 
-`global.js` is common to all projects and includes comonly used functions such as: 
-* The location of html snippets file (pulled in via AJAX)
-* Console log definition (to prevent JS from breaking in lt IE8)
+`|   |-- img` contains all images used within CSS for the site (it can also include the site logo)
 
-`jquery.ourplugin.0.1.js` is an example of a Zone created plugin. 
-
-Plugins we write specific to this project should be stored with the framework prefix (most probably jquery) and the name and if necessary the version.
+`|   |-- svg` contains all svg files used in the site
 
 
