@@ -27,7 +27,7 @@
 ** Please view README.md files within each folder for more info **
 
 ## Setting up the project
-`|-- package.json` contains all the dependencies you'll need to  develop locally. Run `install npm --save-dev` to install all the grunt modules you require. The flag `--save-dev` means that anyone  installing the modules on their machine will install exactly the same ones you have.
+`|-- package.json` contains all the dependencies you'll need to  develop locally. Run `npm install --save-dev` to install all the grunt modules you require. The flag `--save-dev` means that anyone  installing the modules on their machine will install exactly the same ones you have.
 
 
 
