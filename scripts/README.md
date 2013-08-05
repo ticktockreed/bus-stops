@@ -3,14 +3,14 @@
 ##Folder Structure
 
 	|-- scripts
-	|   |-- libs
-	|   |   |-- modernizr.latest.js //latest dev version
-	|   |   |-- selectivizr.js
-	|   |-- plugins
-	|   |   |-- jquery.validate.js
-	|	|   |-- jquery.zone.plugin.0.1.js
-	|   |-- app.js
-	|   |-- base.js
+	|  |-- libs
+	|  |  |-- modernizr.latest.js //latest dev version
+	|  |  |-- selectivizr.js
+	|  |-- plugins
+	|  |  |-- jquery.validate.js
+	|  |  |-- jquery.zone.plugin.0.1.js
+	|  |-- app.js
+	|  |-- base.js
 
 All javascript files go in here.
 

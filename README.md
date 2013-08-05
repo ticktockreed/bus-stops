@@ -3,13 +3,13 @@
 ## Folder Structure
 
 
-    |--boilerplate
-        |-- scripts
-        |-- snippets
-        |-- styles
-        |-- favicon.ico
-        |-- humans.txt
-        |-- index.html
+	|--boilerplate
+		|-- scripts
+		|-- snippets
+		|-- styles
+		|-- favicon.ico
+		|-- humans.txt
+		|-- index.html
 
 `|-- scripts` contains ALL javascript files.
 

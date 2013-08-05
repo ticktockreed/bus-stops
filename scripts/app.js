@@ -35,15 +35,15 @@ var app;
     *   @return Void
     */
     
-    init: function() init {
+    init: function initFn() {
 
-      app.first();
+      app.firstFunction();
 
     },
 
-    firstFunction: function() firstFunction {
+    firstFunction: function firstFunctionFn() {
 
-
+      console.log('firstFunction of app.js is working', 'color: blue; font-size: x-large');
 
     }
 

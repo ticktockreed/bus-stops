@@ -3,14 +3,15 @@
 ##Folder Structure
 
 	|-- styles
-	|   |-- css
-	|   |   |-- min
-    |   |   |   |-- global.min.css
-	|   |-- sass
-    |   |   |-- global.scss
-    |   |-- fonts
-    |   |-- img
-    |   |-- svg
+	| |-- css
+	| | |-- min
+	| | | |-- global.min.css
+	| |-- sass
+	| | |-- global.scss
+	| |-- fonts
+	| |-- img
+	| |-- svg
+
 
 This folder contains ALL styles and assets used in the site or app.
 

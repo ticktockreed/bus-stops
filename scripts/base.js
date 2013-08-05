@@ -37,7 +37,7 @@ var base;
 					
 		----------------------------------------------------------------------------- */
 	
-        init: function() init {
+        init: function initFn() {
 
             // Initial setup
             base.define_console_log();
@@ -49,7 +49,7 @@ var base;
         
         
         /* Define console.log */
-        define_console_log: function() define_console_log {
+        define_console_log: function define_console_logFn() {
             if (typeof console === 'undefined' || typeof console.log === 'undefined') {
                 /*bases console:true*/
                 console = {};
@@ -64,7 +64,7 @@ var base;
         },
     
         /* Placeholder fallback */
-        placeholder_fallback: function() placeholder_fallback {
+        placeholder_fallback: function placeholder_fallback() {
             /*bases Modernizr:true*/
             if (!Modernizr.input.placeholder) {
                 $('[placeholder]').focus(function () {
@@ -89,7 +89,7 @@ var base;
             }
         },
     
-        outerhtml_fallback:function() outerhtml_fallback {
+        outerhtml_fallback:function outerhtml_fallback() {
             $.fn.outerHTML = function(){
  
                 // IE, Chrome & Safari will comply with the non-standard outerHTML, all others (FF) will have a fall-back for cloning
@@ -106,7 +106,7 @@ var base;
         },
 
         /* Load HTML snippets */
-        load_html_snippets: function() load_html_snippets {
+        load_html_snippets: function load_html_snippets() {
             $.ajax({
                 url: base.CONSTANTS.HTML_SNIPPETS_URL,
                 datatype: 'text/html',
