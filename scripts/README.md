@@ -4,7 +4,9 @@
 
 	|-- scripts
 	|  |-- libs
-	|  |  |-- modernizr.latest.js //latest dev version
+	|  |  |-- min
+	|  |  |  |-- release.min.js
+	|  |  |-- modernizr.latest.js
 	|  |  |-- selectivizr.js
 	|  |-- plugins
 	|  |  |-- jquery.validate.js
@@ -20,6 +22,8 @@ All javascript files go in here.
 
 Plugins made by us should contain the .zone name.
 eg: `jquery.zone.plugin.0.1.js`
+
+`release.min.js` is the compiled and minified scripts used in the production version of the site.
 
 `app.js` contains all code functions specific to this project that are not better included as a separate plugin file.
 *-- please write all functions with variable name and function name. For example*
