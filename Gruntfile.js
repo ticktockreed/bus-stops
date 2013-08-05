@@ -14,7 +14,7 @@ grunt.initConfig({
         jQuery: true
       }
     },
-    all: ['Gruntfile.js', 'scripts/*.js', '!scripts/libs/*.js', '!scripts/release.js', '!scripts/*.min.js']
+    all: ['Gruntfile.js', 'scripts/*.js', 'scripts/plugins/*.js', '!scripts/libs/*.js', '!scripts/release.js', '!scripts/*.min.js']
   },
   concat: {
     options: {
@@ -29,6 +29,15 @@ grunt.initConfig({
     }
   },
   uglify: {
+    options: {
+      banner: '/*! \n' + 
+        'Project: <%= pkg.title %> \n' +
+        'Version: v<%= pkg.version %> \n' +
+        'Date compiled: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
+        'Company: <%= pkg.company %> \n' +
+        'Contributors: <%= pkg.contributors %> \n' +
+        '*/ \n \n'
+    },
     my_target: {
       files: {
         'scripts/min/release.min.js': 'scripts/min/release.min.js'

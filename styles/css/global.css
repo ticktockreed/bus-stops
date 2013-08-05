@@ -25,7 +25,3 @@ body:before, body:after {
 body:after {
   clear: both;
 }
-
-body {
-  border: solid 5px red;
-}

@@ -11,7 +11,8 @@
     "grunt-contrib-watch": "~0.5.1"
   },
   "contributors": [
-    " Your Name"
+    " Your Name",
+    " Somebody Else"
   ],
   "company": "Zone"
 }

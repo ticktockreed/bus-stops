@@ -41,9 +41,11 @@ var app;
 
     },
 
+
+
     firstFunction: function firstFunctionFn() {
 
-      console.log('firstFunction of app.js is working', 'color: blue; font-size: x-large');
+      console.log('%cWelcome to the Zone Front End Boilerplate - This message proves that the first function is running', base.CONSTANTS.LOGSTYLE_INFO);
 
     }
 
