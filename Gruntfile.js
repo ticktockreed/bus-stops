@@ -9,7 +9,7 @@ grunt.initConfig({
       curly: true,
       eqeqeq: true,
       eqnull: true,
-      browser: true,
+      browser: true,  
       globals: {
         jQuery: true
       }
@@ -65,6 +65,17 @@ grunt.initConfig({
         'styles/css/global.css': 'styles/sass/global.scss'
       }
     }
+  },
+  webfont: {
+    icons: {
+      src: 'styles/fonts/icon-font/SVG/*.svg',
+      dest: 'styles/fonts/icon-font/',
+      destCss: 'styles/sass/',
+      options: {
+          stylesheet: 'scss',
+          font: 'site-name'
+      }
+    }
   }
 });
 
@@ -73,6 +84,7 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-webfont');
 
 grunt.registerTask('default', ['sass:dev' , 'jshint']);
 grunt.registerTask('prod', ['sass' , 'concat', 'jshint', 'uglify']);
