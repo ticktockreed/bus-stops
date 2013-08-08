@@ -48,21 +48,18 @@ grunt.initConfig({
     files: ['<%= jshint.all %>', 'sass/**/*.scss'], // we watch the sass directory (not the file)
     tasks: ['default']
   },
-  sass: {
-    prod: {
-      options: {
-        style: 'compressed'
-      },  
-      files: {                                                    
-        'styles/css/min/global-min.css': 'styles/sass/global.scss'
+  compass: {                  
+    prod: {                   
+      options: {              
+        sassDir: 'styles/sass/',
+        cssDir: 'styles/css/min/',
+        environment: 'production'
       }
     },
-    dev: {
+    dev: {            
       options: {
-        style: 'expanded'
-      },
-      files: {
-        'styles/css/global.css': 'styles/sass/global.scss'
+        sassDir: 'styles/sass/',
+        cssDir: 'styles/css/'
       }
     }
   },
@@ -72,8 +69,8 @@ grunt.initConfig({
       dest: 'styles/fonts/icon-font/',
       destCss: 'styles/sass/',
       options: {
-          stylesheet: 'scss',
-          font: 'site-name'
+        stylesheet: 'scss',
+        font: 'site-name'
       }
     }
   }
@@ -82,11 +79,11 @@ grunt.initConfig({
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-sass');
+grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-webfont');
 
-grunt.registerTask('default', ['sass:dev' , 'jshint']);
-grunt.registerTask('prod', ['sass' , 'concat', 'jshint', 'uglify']);
+grunt.registerTask('default', ['compass:dev' , 'jshint']);
+grunt.registerTask('prod', ['compass' , 'concat', 'jshint', 'uglify']);
 
 };
