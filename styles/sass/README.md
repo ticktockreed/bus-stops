@@ -10,10 +10,12 @@
 
 `|   |-- _base.scss` contains variables for colour, fonts and spacing used in the site.
 
+
 `|   |-- _grid.scss` contains the semantic grid used for Responsive web builds.
 **needs fixing** to have push and pull classes work with right and left positioning rather than margins.
 
 `|   |-- global.scss` references all the files it needs to compile the screen css.
+**This file is only used to import other files***
 
 
 _______

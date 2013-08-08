@@ -48,7 +48,7 @@ grunt.initConfig({
     files: ['<%= jshint.all %>', 'sass/**/*.scss'], // we watch the sass directory (not the file)
     tasks: ['default']
   },
-  compass: {                  
+  compass: {
     prod: {                   
       options: {              
         sassDir: 'styles/sass/',
