@@ -16,15 +16,6 @@ grunt.initConfig({
     },
     all: ['Gruntfile.js', 'scripts/*.js', 'scripts/plugins/*.js', '!scripts/libs/*.js', '!scripts/release.js', '!scripts/*.min.js']
   },
-  asciify: {
-    myBanner: {
-      text: 'ZONE',
-      options:{
-        font:'graffiti',
-        log:true
-      }
-    }
-  },
   concat: {
     options: {
       separator: ' ',
@@ -39,7 +30,7 @@ grunt.initConfig({
   },
   uglify: {
     options: {
-      banner: '/*!\n <%= asciify_myBanner %> \n' + 
+      banner: '/*! \n' + 
         'Project: <%= pkg.title %> \n' +
         'Version: v<%= pkg.version %> \n' +
         'Date compiled: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
@@ -91,7 +82,6 @@ grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-webfont');
-grunt.loadNpmTasks('grunt-asciify');
 
 grunt.registerTask('default', ['compass:dev' , 'jshint']);
 grunt.registerTask('prod', ['compass' , 'concat', 'jshint', 'uglify']);
