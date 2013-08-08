@@ -15,7 +15,9 @@
 **needs fixing** to have push and pull classes work with right and left positioning rather than margins.
 
 `|   |-- global.scss` references all the files it needs to compile the screen css.
-**This file is only used to import other files***
+**This file is only used to import other files**
+
+`|  |-- styles.scss` contains all styles used in the Design Kit should be written here as mixins `@mixin` or extendable `@extend` classes. Use `@mixin` for styles with variable attributes and `@extend` for full class extensions. Examples of how to markup a mixin and extend class are contained in the file.
 
 
 _______

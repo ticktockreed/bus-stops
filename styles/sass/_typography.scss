@@ -1,0 +1,158 @@
+
+// Styles
+
+// $author                    Zone
+// $url                       http://www.thisiszone.com/
+// $copyright                 Copyright (c) 2012, thisiszone.com. All rights reserved.
+// $version                   1.0
+
+
+
+/* #Fonts ------------------------------------------------------------------------ */
+
+body {
+  padding: 0; 
+  margin:0;
+  font-family: $font-copy; 
+  color: $color-text; 
+  font-size: 14px; 
+  line-height: 1.85em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  //...
+}
+
+h1 {
+  @extend %heading_1;
+}                                                                                                                                                              /* 16px */
+
+p {
+  //...
+}
+p img {
+  //...
+}
+
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: 800;
+}
+small {
+  font-size: 80%;
+}
+
+// #Blockquotes ---------------------------------------------------------------
+blockquote  {
+  color:$color-indigo; 
+  position:relative;
+}
+blockquote p {
+  font-size:1.714em; 
+  margin-bottom:0;
+  line-height: 1.4em;
+}
+
+hr {
+  border: solid $color-text; 
+  border-width: 1px 0 0; 
+  clear: both;  
+  height: 0;
+}
+br {
+  height: 0;
+}
+address br {
+  margin:0;
+}
+
+
+// #Links ---------------------------------------------------------------------
+a {
+  color: $color-link; 
+  text-decoration: none; 
+  @include transition-cubic-bezier(all);
+}
+a:active {
+  color: $color-link; 
+  text-decoration: none; 
+  border-color:transparent; 
+  @include box-shadow(rgba(0, 0, 0, 0), 0, 0, 0, 0);
+}
+a:hover {
+  text-decoration:underline; 
+  outline:0 none;
+}
+.ie a:focus {
+  outline:1px dotted black; 
+}
+
+p a, p a:visited {
+  line-height: inherit;
+}
+a * {
+  cursor:pointer;
+}
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+hr {
+  height:0px;
+}
+p {
+  margin-bottom:1em;
+  orphans: 3;
+}
+.link {
+  background: url("../img/arrow-right-small.png") no-repeat scroll right 4px transparent;
+  padding-right: 15px;
+  text-decoration: none;
+}
+h2 {
+  background-position: right 8px;
+  font-weight:normal;
+}
+
+// #Tables --------------------------------------------------------------------
+
+table {
+  border:none;
+  margin-bottom: 16px;
+  vertical-align: top;
+  
+  tbody {
+    border:none;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+  }
+  
+  thead {
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+  }
+  
+  thead td, th {
+    border:none;
+    padding: 10px;
+    line-height: 1em;
+    background-color: #E1F4FF;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;        
+    vertical-align: top;
+    font-weight: bold;
+  }
+  
+  td {
+    border:none;
+    padding: 6px 8px;
+    line-height: 1em;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background-color: #EEF9FF;
+    vertical-align: top;
+  }    
+}

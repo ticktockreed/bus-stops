@@ -1,0 +1,39 @@
+
+// Styles
+
+// $author                    Zone
+// $url                       http://www.thisiszone.com/
+// $copyright                 Copyright (c) 2012, thisiszone.com. All rights reserved.
+// $version                   1.0
+
+
+// -------------------------------------------------------------------------------- 
+// ---------- Headings ------------------------------------------------------------ 
+// -------------------------------------------------------------------------------- 
+
+// Extendable classes (not to be compiled)
+%heading_1{
+	font: $font-heading;
+}
+
+
+// -------------------------------------------------------------------------------- 
+// ---------- Transitions --------------------------------------------------------- 
+// -------------------------------------------------------------------------------- 
+
+// @title transition-cubic-bezier
+// -------------------------------------------------------
+// Transition between one, or all, attributes using 
+// cubic-bezier timing function
+// -------------------------------------------------------
+// $property - Property upon which to perform the transition
+// $time   - Time taken to perform the transition
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+
+@mixin transition-cubic-bezier($property, $time: 350ms) {
+  @include transition-property($property);
+  @include transition-duration($time);
+  @include transition-timing-function(cubic-bezier(0.5, 0,0.5, 1)); 
+}
+
