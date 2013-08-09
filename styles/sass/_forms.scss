@@ -6,29 +6,34 @@
 // $copyright                 Copyright (c) 2012, thisiszone.com. All rights reserved.
 // $version                   1.0
 
-input, textarea {
-  padding: 3px 10px;
-  border: 1px solid #cccccc;
-  background: white;
-  color: $color-text; 
-  //padding: 0.25em 0.75em; /* 4px, 12px/16px */ 
-  width:99%;
-  
-  /* These styles force the IE6 box model - e.g. padding does not affect width */
-  box-sizing: border-box; /* css3 rec */
-  -moz-box-sizing: border-box; /* ff2 */
-  -ms-box-sizing: border-box; /* ie8 */
-  -webkit-box-sizing: border-box; /* safari3 */
-  -khtml-box-sizing: border-box; /* konqueror */
-}
+
+// -------------------------------------------------------------------------------- 
+// ---------- Base Form Elements --------------------------------------------------
+// -------------------------------------------------------------------------------- 
 
 form {
   position: relative;
   margin: 0;
   margin-top: $spacing-vertical;
 } 
+input, textarea {
+  padding: 3px 10px;
+  border: 1px solid #cccccc;
+  background: white;
+  color: $color-text;
 
-fieldset {margin-bottom: $spacing-vertical-small; } 
+  @extend %box-model-border-box;
+}
+fieldset {
+  margin-bottom: $spacing-vertical-small; 
+}
+
+
+// -------------------------------------------------------------------------------- 
+// ---------- Inputs -------------------------------------------------------------- 
+// -------------------------------------------------------------------------------- 
+
+// Text Inputs --------------------------------------------------------------------
 
 input[type="text"],
 input[type="password"],
@@ -42,8 +47,7 @@ textarea {
   color: $color-text;
   margin: 0;
   max-width: 100%;
-  width:100%;
-  
+  width: 100%;
   background: white; 
   
   @include inline-block;
@@ -59,22 +63,41 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  -webkit-appearance: none;
   border: 1px solid $color-text;
 }
+
+// Checkbox and Radio Inputs ------------------------------------------------------
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline;
+  width: auto;
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label{
+  @include inline-block();
+}
+
+// Form Buttons -------------------------------------------------------------------
+
 input[type="submit"],
 input[type="button"],
 input.submit{
-  -webkit-appearance: none;
   width: auto;
   border: none;
   @include border-radius(0);
 }
 
-textarea {min-height: 60px; resize: none;}
-label,legend {display: block;  margin-bottom:$spacing-vertical-small;}
-label span,legend span {color: $color-text; }
 
-input[type="radio"] ,input[type="checkbox"] {display: inline;width:auto;}
-input[type="radio"] + label,
-input[type="checkbox"] + label{@include inline-block();}
+// -------------------------------------------------------------------------------- 
+// ---------- Other Form Elements -------------------------------------------------
+// -------------------------------------------------------------------------------- 
+
+label,legend {
+  display: block;  
+  margin-bottom:$spacing-vertical-small;
+}
+label span,legend span {
+  color: $color-text; 
+}
+

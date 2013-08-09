@@ -37,3 +37,22 @@
   @include transition-timing-function(cubic-bezier(0.5, 0,0.5, 1)); 
 }
 
+
+// -------------------------------------------------------------------------------- 
+// ---------- Useful things -------------------------------------------------------
+// -------------------------------------------------------------------------------- 
+
+// @title box-model-border-box
+// -------------------------------------------------------
+// These styles force the IE6 box model 
+// - e.g. padding does not affect width
+// -------------------------------------------------------
+// 
+// Compatible in IE8+, Chrome 4.0, Firefox 2+, Safari 3.1+, Opera 9.5+
+// For IE7 you may think to use a polyfill - Don't!
+// Just create .ie7 classes to fix
+// For more info check out http://caniuse.com/css3-boxsizing
+
+%box-model-border-box {
+  @include box-sizing(border-box);
+}

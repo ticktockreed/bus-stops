@@ -8,16 +8,16 @@
 
 
 
-/* #Fonts ------------------------------------------------------------------------ */
 
 body {
-  padding: 0; 
-  margin:0;
-  font-family: $font-copy; 
-  color: $color-text; 
-  font-size: 14px; 
-  line-height: 1.85em;
+  font: normal normal 16px/1.2em $font-copy;
+  color: $color-text;
 }
+
+
+// -------------------------------------------------------------------------------- 
+// ---------- Headings ------------------------------------------------------------ 
+// -------------------------------------------------------------------------------- 
 
 h1, h2, h3, h4, h5, h6 {
   //...
@@ -27,12 +27,20 @@ h1 {
   @extend %heading_1;
 }                                                                                                                                                              /* 16px */
 
+// -------------------------------------------------------------------------------- 
+// ---------- Paragraphs ----------------------------------------------------------
+// -------------------------------------------------------------------------------- 
+
 p {
   //...
 }
 p img {
   //...
 }
+
+// -------------------------------------------------------------------------------- 
+// ---------- Inline text elements ------------------------------------------------
+// --------------------------------------------------------------------------------
 
 em {
   font-style: italic;
@@ -44,67 +52,61 @@ small {
   font-size: 80%;
 }
 
-// #Blockquotes ---------------------------------------------------------------
+// -------------------------------------------------------------------------------- 
+// ---------- Blockquotes ---------------------------------------------------------
+// -------------------------------------------------------------------------------- 
+
 blockquote  {
-  color:$color-indigo; 
-  position:relative;
+  color: $color-indigo; 
+  position: relative;
 }
 blockquote p {
-  font-size:1.714em; 
-  margin-bottom:0;
-  line-height: 1.4em;
 }
-
 hr {
-  border: solid $color-text; 
-  border-width: 1px 0 0; 
-  clear: both;  
+  border: solid $color-text;
+  border-width: 1px 0 0;
+  clear: both;
   height: 0;
 }
 br {
   height: 0;
 }
-address br {
-  margin:0;
-}
 
+// -------------------------------------------------------------------------------- 
+// ---------- Links ---------------------------------------------------------------
+// -------------------------------------------------------------------------------- 
 
-// #Links ---------------------------------------------------------------------
 a {
-  color: $color-link; 
-  text-decoration: none; 
+  color: $color-link;
   @include transition-cubic-bezier(all);
 }
 a:active {
-  color: $color-link; 
-  text-decoration: none; 
-  border-color:transparent; 
-  @include box-shadow(rgba(0, 0, 0, 0), 0, 0, 0, 0);
+  color: $color-link;
 }
 a:hover {
-  text-decoration:underline; 
-  outline:0 none;
+  text-decoration: underline; 
+  outline: 0 none;
 }
 .ie a:focus {
-  outline:1px dotted black; 
-}
-
-p a, p a:visited {
-  line-height: inherit;
+  outline: 1px dotted black; 
 }
 a * {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .ie7 img {
+  /* 
+  *  Fix for IE7 stretched images (basically it
+  *  makes images not look rubbish when streteched) 
+  */
   -ms-interpolation-mode: bicubic;
 }
 
 hr {
-  height:0px;
+  height: 0px;
 }
 p {
-  margin-bottom:1em;
+  margin-bottom: 1em;
   orphans: 3;
 }
 .link {
@@ -112,20 +114,18 @@ p {
   padding-right: 15px;
   text-decoration: none;
 }
-h2 {
-  background-position: right 8px;
-  font-weight:normal;
-}
 
-// #Tables --------------------------------------------------------------------
+// -------------------------------------------------------------------------------- 
+// ---------- Tables --------------------------------------------------------------
+// --------------------------------------------------------------------------------
 
 table {
-  border:none;
+  border: none;
   margin-bottom: 16px;
   vertical-align: top;
   
   tbody {
-    border:none;
+    border: none;
     border-left: 1px solid #fff;
     border-top: 1px solid #fff;
   }
@@ -136,7 +136,7 @@ table {
   }
   
   thead td, th {
-    border:none;
+    border: none;
     padding: 10px;
     line-height: 1em;
     background-color: #E1F4FF;
@@ -147,7 +147,7 @@ table {
   }
   
   td {
-    border:none;
+    border: none;
     padding: 6px 8px;
     line-height: 1em;
     border-right: 1px solid #fff;

@@ -14,7 +14,15 @@ grunt.initConfig({
         jQuery: true
       }
     },
-    all: ['Gruntfile.js', 'scripts/*.js', 'scripts/plugins/*.js', '!scripts/libs/*.js', '!scripts/release.js', '!scripts/*.min.js']
+    all: [
+      'Gruntfile.js', 
+      'scripts/*.js', 
+      'scripts/plugins/*.js', 
+      '!scripts/libs/*.js', 
+      '!scripts/google-analytics-tracking.js', 
+      '!scripts/release.js', 
+      '!scripts/*.min.js'
+    ]
   },
   concat: {
     options: {

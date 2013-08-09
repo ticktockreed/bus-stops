@@ -83,39 +83,34 @@ h1 {
   font: "Bliss Regular", "Gill Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-/* line 9, ../sass/_forms.scss */
+/* line 56, ../sass/_styles.scss */
 input, textarea {
-  padding: 3px 10px;
-  border: 1px solid #cccccc;
-  background: white;
-  color: #323230;
-  width: 99%;
-  /* These styles force the IE6 box model - e.g. padding does not affect width */
-  box-sizing: border-box;
-  /* css3 rec */
-  -moz-box-sizing: border-box;
-  /* ff2 */
-  -ms-box-sizing: border-box;
-  /* ie8 */
   -webkit-box-sizing: border-box;
-  /* safari3 */
-  -khtml-box-sizing: border-box;
-  /* konqueror */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* line 25, ../sass/_forms.scss */
+/* line 14, ../sass/_forms.scss */
 form {
   position: relative;
   margin: 0;
   margin-top: 1.4em;
 }
 
-/* line 31, ../sass/_forms.scss */
+/* line 19, ../sass/_forms.scss */
+input, textarea {
+  padding: 3px 10px;
+  border: 1px solid #cccccc;
+  background: white;
+  color: #323230;
+}
+
+/* line 27, ../sass/_forms.scss */
 fieldset {
   margin-bottom: 0.7em;
 }
 
-/* line 37, ../sass/_forms.scss */
+/* line 42, ../sass/_forms.scss */
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -155,7 +150,7 @@ textarea {
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-/* line 61, ../sass/_forms.scss */
+/* line 65, ../sass/_forms.scss */
 input[type="text"]:hover,
 input[type="password"]:hover,
 input[type="email"]:hover,
@@ -164,48 +159,17 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  -webkit-appearance: none;
   border: 1px solid #323230;
 }
 
-/* line 67, ../sass/_forms.scss */
-input[type="submit"],
-input[type="button"],
-input.submit {
-  -webkit-appearance: none;
-  width: auto;
-  border: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-
-/* line 74, ../sass/_forms.scss */
-textarea {
-  min-height: 60px;
-  resize: none;
-}
-
-/* line 75, ../sass/_forms.scss */
-label, legend {
-  display: block;
-  margin-bottom: 0.7em;
-}
-
-/* line 76, ../sass/_forms.scss */
-label span, legend span {
-  color: #323230;
-}
-
-/* line 78, ../sass/_forms.scss */
-input[type="radio"], input[type="checkbox"] {
+/* line 72, ../sass/_forms.scss */
+input[type="radio"],
+input[type="checkbox"] {
   display: inline;
   width: auto;
 }
 
-/* line 80, ../sass/_forms.scss */
+/* line 77, ../sass/_forms.scss */
 input[type="radio"] + label,
 input[type="checkbox"] + label {
   display: -moz-inline-stack;
@@ -216,47 +180,59 @@ input[type="checkbox"] + label {
   *display: inline;
 }
 
-/* #Fonts ------------------------------------------------------------------------ */
-/* line 13, ../sass/_typography.scss */
-body {
-  padding: 0;
-  margin: 0;
-  font-family: helvetica, arial, clean, sans-serif;
+/* line 85, ../sass/_forms.scss */
+input[type="submit"],
+input[type="button"],
+input.submit {
+  width: auto;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 96, ../sass/_forms.scss */
+label, legend {
+  display: block;
+  margin-bottom: 0.7em;
+}
+
+/* line 100, ../sass/_forms.scss */
+label span, legend span {
   color: #323230;
-  font-size: 14px;
-  line-height: 1.85em;
+}
+
+/* line 12, ../sass/_typography.scss */
+body {
+  font: normal normal 16px/1.2em helvetica, arial, clean, sans-serif;
+  color: #323230;
 }
 
 /* 16px */
-/* line 37, ../sass/_typography.scss */
+/* line 45, ../sass/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 40, ../sass/_typography.scss */
+/* line 48, ../sass/_typography.scss */
 strong {
   font-weight: 800;
 }
 
-/* line 43, ../sass/_typography.scss */
+/* line 51, ../sass/_typography.scss */
 small {
   font-size: 80%;
 }
 
-/* line 48, ../sass/_typography.scss */
+/* line 59, ../sass/_typography.scss */
 blockquote {
   color: #424297;
   position: relative;
 }
 
-/* line 52, ../sass/_typography.scss */
-blockquote p {
-  font-size: 1.714em;
-  margin-bottom: 0;
-  line-height: 1.4em;
-}
-
-/* line 58, ../sass/_typography.scss */
+/* line 65, ../sass/_typography.scss */
 hr {
   border: solid #323230;
   border-width: 1px 0 0;
@@ -264,20 +240,14 @@ hr {
   height: 0;
 }
 
-/* line 64, ../sass/_typography.scss */
+/* line 71, ../sass/_typography.scss */
 br {
   height: 0;
 }
 
-/* line 67, ../sass/_typography.scss */
-address br {
-  margin: 0;
-}
-
-/* line 73, ../sass/_typography.scss */
+/* line 79, ../sass/_typography.scss */
 a {
   color: #ee3d96;
-  text-decoration: none;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -292,64 +262,52 @@ a {
   transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-/* line 78, ../sass/_typography.scss */
+/* line 83, ../sass/_typography.scss */
 a:active {
   color: #ee3d96;
-  text-decoration: none;
-  border-color: transparent;
-  -webkit-box-shadow: rgba(0, 0, 0, 0), 0, 0, 0, 0;
-  -moz-box-shadow: rgba(0, 0, 0, 0), 0, 0, 0, 0;
-  box-shadow: rgba(0, 0, 0, 0), 0, 0, 0, 0;
 }
 
-/* line 84, ../sass/_typography.scss */
+/* line 86, ../sass/_typography.scss */
 a:hover {
   text-decoration: underline;
   outline: 0 none;
 }
 
-/* line 88, ../sass/_typography.scss */
+/* line 90, ../sass/_typography.scss */
 .ie a:focus {
   outline: 1px dotted black;
 }
 
-/* line 92, ../sass/_typography.scss */
-p a, p a:visited {
-  line-height: inherit;
-}
-
-/* line 95, ../sass/_typography.scss */
+/* line 93, ../sass/_typography.scss */
 a * {
   cursor: pointer;
 }
 
-/* line 99, ../sass/_typography.scss */
+/* line 97, ../sass/_typography.scss */
 .ie7 img {
+  /* 
+  *  Fix for IE7 stretched images (basically it
+  *  makes images not look rubbish when streteched) 
+  */
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 103, ../sass/_typography.scss */
+/* line 105, ../sass/_typography.scss */
 hr {
   height: 0px;
 }
 
-/* line 106, ../sass/_typography.scss */
+/* line 108, ../sass/_typography.scss */
 p {
   margin-bottom: 1em;
   orphans: 3;
 }
 
-/* line 110, ../sass/_typography.scss */
+/* line 112, ../sass/_typography.scss */
 .link {
   background: url("../img/arrow-right-small.png") no-repeat scroll right 4px transparent;
   padding-right: 15px;
   text-decoration: none;
-}
-
-/* line 115, ../sass/_typography.scss */
-h2 {
-  background-position: right 8px;
-  font-weight: normal;
 }
 
 /* line 122, ../sass/_typography.scss */
