@@ -60,12 +60,11 @@ Grid selection (Fixed, fluid)
 Code follows first draft of coding standards (not yet written)
 
 
-**To do**
-Font awesome
-Test all elements in template
-Test for Accessibility
-Print SCSS
-Check all code against coding standards (not yet written)
+TODO Font awesome
+TODO Test all elements in template
+TODO Test for Accessibility
+TODO Print SCSS
+TODO Check all code against coding standards (not yet written)
 
 
 
