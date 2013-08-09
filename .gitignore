@@ -3,3 +3,4 @@ Thumbs.db
 __MACOSX/
 node_modules/
 .sass-cache/
+scripts/min/*.js

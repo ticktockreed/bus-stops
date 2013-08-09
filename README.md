@@ -11,6 +11,7 @@
 		|-- humans.txt
         |-- index.html
 		|-- package.json
+		|-- references.md
 
 `|-- scripts` contains ALL javascript files.
 
@@ -24,15 +25,22 @@
 
 `|-- index.html` is the basic page markup (distilled from the HTML5 Boilerplate).
 
+`|-- references.md` is a list of links researched to inform this template
+
 ** Please view README.md files within each folder for more info **
 
 ## Setting up the project
-`|-- package.json` contains all the dependencies you'll need to  develop locally. Run `npm install --save-dev` to install all the grunt modules you require. The flag `--save-dev` means that anyone  installing the modules on their machine will install exactly the same ones you have.
+ contains all the dependencies you'll need to  develop locally. 
 
+**If you are the first to work on this project**
+1. Change the Project details in `|-- package.json`
+2. Run `npm install --save-dev`
 
+**If this has already been set up**
+1. Add your name to the project in `|-- package.json`
+2. Run `npm install`
 
 _____
 
 **Notes**
-
-*not sure if this should be in here
+...
