@@ -43,7 +43,9 @@
 
 _____
 
-**Version 0.1.0 Notes**
+
+**Version 0.1.0 Release Notes**
+add Release notes and to do
 Sass & Compass
 Semantic grid
 Reset method 
@@ -55,6 +57,7 @@ Empty index file (Maybe some dummy placeholder content?)
 Then maybe some extra options for the more advanced version:
 Twitter bootstrap
 Grid selection (Fixed, fluid)
+Code follows first draft of coding standards (not yet written)
 
 
 **To do**
