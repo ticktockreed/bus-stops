@@ -33,12 +33,16 @@
  contains all the dependencies you'll need to  develop locally. 
 
 **If you are the first to work on this project**
+
 1. Change the Project details in `|-- package.json`
-2. Run `npm install --save-dev`
+2. Add your name to `|-- humans.txt`
+3. Run `npm install --save-dev`
 
 **If this has already been set up**
+
 1. Add your name to the project in `|-- package.json`
-2. Run `npm install`
+2. Add your name to `|-- humans.txt`
+3. Run `npm install`
 
 _____
 
