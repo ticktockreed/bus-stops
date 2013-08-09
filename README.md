@@ -5,17 +5,14 @@
 
 	|--boilerplate
 		|-- scripts
-		|-- snippets
 		|-- styles
 		|-- favicon.ico
 		|-- humans.txt
-        |-- index.html
+    |-- index.html
 		|-- package.json
 		|-- references.md
 
 `|-- scripts` contains ALL javascript files.
-
-`|-- snippets` contains HTML snippets.*
 
 `|-- styles` contains all assets used in styling the site; CSS, SASS, SVG, images etc.
 
