@@ -95,6 +95,26 @@ body:after {
   font: "Bliss Regular", "Gill Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
+/* line 38, ../sass/_styles.scss */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea, a {
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  -o-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: 350ms;
+  -moz-transition-duration: 350ms;
+  -o-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  -moz-transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  -o-transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+}
+
 /* line 14, ../sass/_forms.scss */
 form {
   position: relative;

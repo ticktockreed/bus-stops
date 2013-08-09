@@ -53,7 +53,7 @@ grunt.initConfig({
     }
   },
   watch: {
-    files: ['<%= jshint.all %>', 'sass/**/*.scss'], // we watch the sass directory (not the file)
+    files: ['<%= jshint.all %>', 'styles/sass/*.scss'], // we watch the sass directory (not the file)
     tasks: ['default']
   },
   compass: {

@@ -97,7 +97,7 @@ br {
 
 a {
   color: $color-link;
-  @extend transition-cubic-bezier-border;
+  @extend %transition-cubic-bezier-border;
 }
 a:active {
   color: $color-link;

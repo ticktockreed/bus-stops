@@ -43,7 +43,7 @@ textarea {
   
   @include inline-block;
   @include border-radius(0);
-  @extend transition-cubic-bezier-border;
+  @extend %transition-cubic-bezier-border;
 }
 
 input[type="text"]:hover,
