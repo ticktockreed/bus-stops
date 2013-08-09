@@ -2,17 +2,17 @@
 
 ##Folder Structure
 
-	|-- scripts
-	|  |-- libs
-	|  |  |-- min
-	|  |  |  |-- release.min.js
-	|  |  |-- modernizr.latest.js
-	|  |  |-- selectivizr.js
-	|  |-- plugins
-	|  |  |-- jquery.validate.js
-	|  |  |-- jquery.zone.plugin.0.1.js
-	|  |-- app.js
-	|  |-- base.js
+  |-- scripts
+  |  |-- libs
+  |  |  |-- min
+  |  |  |  |-- release.min.js
+  |  |  |-- modernizr.latest.js
+  |  |  |-- selectivizr.js
+  |  |-- plugins
+  |  |  |-- jquery.validate.js
+  |  |  |-- jquery.zone.plugin.0.1.js
+  |  |-- app.js
+  |  |-- base.js
 
 All javascript files go in here.
 
@@ -28,7 +28,7 @@ eg: `jquery.zone.plugin.0.1.js`
 `app.js` contains all code functions specific to this project that are not better included as a separate plugin file.
 *-- please write all functions with variable name and function name. For example*
 
-	define_console_log: function() define_console_log {} 
+  define_console_log: function() define_console_log {} 
 
 `base.js` is common to all projects and includes comonly used functions and variables such as: 
 
