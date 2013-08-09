@@ -6,6 +6,11 @@
 // $copyright                 Copyright (c) 2012, thisiszone.com. All rights reserved.
 // $version                   1.0
 
+
+// Note!! THIS FILE IS FOR IMPORTS ONLY 
+// Do not add classes, extensions or mixins in this file
+
+
 // Library Imports
 
 @import "compass/reset";
@@ -14,6 +19,7 @@
 // Zone Imports
 
 @import "_base.scss"; 
+@import "_utilities.scss";
 @import "_grid.scss";
 
 // Zone Imports (optional)
@@ -22,3 +28,8 @@
 @import "_forms.scss";
 @import "_typography.scss";
 
+
+// Example files - you can create these yourself as you see fit
+
+// @import "_site-furniture.scss";
+// @import "_carousel.scss";

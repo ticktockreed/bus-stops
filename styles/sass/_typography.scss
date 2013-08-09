@@ -7,8 +7,6 @@
 // $version                   1.0
 
 
-
-
 body {
   font: normal normal 16px/1.2em $font-copy;
   color: $color-text;
@@ -19,13 +17,24 @@ body {
 // ---------- Headings ------------------------------------------------------------ 
 // -------------------------------------------------------------------------------- 
 
-h1, h2, h3, h4, h5, h6 {
-  //...
+.pageheading {
+  @extend %heading_1;
+}
+.articleheading {
+//...
+}                                                                                                                                      /* 16px */
+
+// -------------------------------------------------------------------------------- 
+// ---------- RTE Content ---------------------------------------------------------
+// --------------------------------------------------------------------------------
+// This is content added to the site through a Rich Text Editor
+
+.rte {
+
+  h1 {@extend %heading_2}
+
 }
 
-h1 {
-  @extend %heading_1;
-}                                                                                                                                                              /* 16px */
 
 // -------------------------------------------------------------------------------- 
 // ---------- Paragraphs ----------------------------------------------------------
@@ -37,6 +46,7 @@ p {
 p img {
   //...
 }
+
 
 // -------------------------------------------------------------------------------- 
 // ---------- Inline text elements ------------------------------------------------
@@ -51,6 +61,7 @@ strong {
 small {
   font-size: 80%;
 }
+
 
 // -------------------------------------------------------------------------------- 
 // ---------- Blockquotes ---------------------------------------------------------
@@ -72,13 +83,21 @@ br {
   height: 0;
 }
 
+
 // -------------------------------------------------------------------------------- 
 // ---------- Links ---------------------------------------------------------------
 // -------------------------------------------------------------------------------- 
 
+*:focus {
+  @include box-shadow;
+}
+.ie *:focus {
+  outline: 1px dotted black;
+}
+
 a {
   color: $color-link;
-  @include transition-cubic-bezier(all);
+  @extend transition-cubic-bezier-border;
 }
 a:active {
   color: $color-link;
@@ -86,9 +105,6 @@ a:active {
 a:hover {
   text-decoration: underline; 
   outline: 0 none;
-}
-.ie a:focus {
-  outline: 1px dotted black; 
 }
 a * {
   cursor: pointer;
@@ -107,52 +123,35 @@ hr {
 }
 p {
   margin-bottom: 1em;
-  orphans: 3;
-}
-.link {
-  background: url("../img/arrow-right-small.png") no-repeat scroll right 4px transparent;
-  padding-right: 15px;
-  text-decoration: none;
 }
 
 // -------------------------------------------------------------------------------- 
 // ---------- Tables --------------------------------------------------------------
 // --------------------------------------------------------------------------------
 
+// Left blank on purpose 
+// see http://coding.smashingmagazine.com/2008/08/13/top-10-css-table-designs/ 
+
 table {
-  border: none;
-  margin-bottom: 16px;
-  vertical-align: top;
+  //...
   
   tbody {
-    border: none;
-    border-left: 1px solid #fff;
-    border-top: 1px solid #fff;
+    //...
   }
   
   thead {
-    border-left: 1px solid #fff;
-    border-top: 1px solid #fff;
+    //...
   }
   
   thead td, th {
-    border: none;
-    padding: 10px;
-    line-height: 1em;
-    background-color: #E1F4FF;
-    border-right: 1px solid #fff;
-    border-bottom: 1px solid #fff;        
-    vertical-align: top;
-    font-weight: bold;
+    //...
   }
   
   td {
-    border: none;
-    padding: 6px 8px;
-    line-height: 1em;
-    border-right: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    background-color: #EEF9FF;
-    vertical-align: top;
+    //...
   }    
 }
+
+
+
+

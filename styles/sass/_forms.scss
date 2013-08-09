@@ -13,8 +13,6 @@
 
 form {
   position: relative;
-  margin: 0;
-  margin-top: $spacing-vertical;
 } 
 input, textarea {
   padding: 3px 10px;
@@ -40,19 +38,12 @@ input[type="password"],
 input[type="email"],
 select,
 textarea {
-  -webkit-appearance: none;
   border: 1px solid #cccccc;
-  line-height:20px;
-  outline: none;
   color: $color-text;
-  margin: 0;
-  max-width: 100%;
-  width: 100%;
-  background: white; 
   
   @include inline-block;
   @include border-radius(0);
-  @include transition-cubic-bezier(all);
+  @extend transition-cubic-bezier-border;
 }
 
 input[type="text"]:hover,

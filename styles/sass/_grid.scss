@@ -1,22 +1,26 @@
 
 // Grid
 
-// $author										Amended by ACoady from the original by Tyler Tate - @tylertate
+// $author										Amended by T.Reed and A.Coady from the original semantic.gs by Tyler Tate - @tylertate
 // $url												http://www.thisiszone.com/
 // $copyright									Copyright (c) 2012, thisiszone.com. All rights reserved.
 // $version										2.0
 // 
 
-/////////////////
-// Semantic.gs // for SCSS: http://sass-lang.com/
-/////////////////
+// -------------------------------------------------------------------------------- 
+// ---------- Variables -----------------------------------------------------------
+// -------------------------------------------------------------------------------- 
 
-// Defaults which you can freely override
 $column-width: 60px;
 $gutter-width: 20px;
 $columns: 12;
 
-// Utility function — you should never need to modify this
+
+// -------------------------------------------------------------------------------- 
+// ---------- Utility function ----------------------------------------------------
+// -------------------------------------------------------------------------------- 
+// You should never need to modify this
+
 @function gridsystem-width($columns:$columns) {
 	@return ($column-width * $columns) + ($gutter-width * $columns);
 }
@@ -25,34 +29,25 @@ $columns: 12;
 $total-width: gridsystem-width($columns);
 $total-width: 100%;
 
-// Uncomment these two lines and the star-hack width/margin lines below to enable sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+
+// -------------------------------------------------------------------------------- 
+// ---------- IE6/7 Fix ----------------------------------------------------------- 
+// -------------------------------------------------------------------------------- 
+// Uncomment these two lines and the star-hack width/margin lines below to enable 
+// sub-pixel fix for IE6 & 7. See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+//
 // $min-width: 999999;
 // $correction: 0.5 / $min-width * 100;
 
-// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
-@mixin clearfix() {
-	*zoom:1;
 
-	&:before,
-	&:after {
-	    content:"";
-	    display:table;
-	}
-	&:after {
-	    clear:both;
-	}
-}
-
-
-//////////
-// GRID //
-//////////
+// -------------------------------------------------------------------------------- 
+// ---------- Grid ----------------------------------------------------------------
+// -------------------------------------------------------------------------------- 
 
 body {
 	width: 100%;
 	@include clearfix();
 }
-
 @mixin row($columns:$columns) {
 	display: block;
 	width: $total-width*(($gutter-width + gridsystem-width($columns))/gridsystem-width($columns));
@@ -71,6 +66,13 @@ body {
 	// *width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns))-$correction;
 	// *margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns))-$correction;
 }
+
+
+// -------------------------------------------------------------------------------- 
+// ---------- Push and Pull -------------------------------------------------------
+// -------------------------------------------------------------------------------- 
+// Move grid items right or left relative to its current position
+
 @mixin push($offset:1) {
 	margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
 }
