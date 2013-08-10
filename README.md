@@ -2,15 +2,15 @@
 
 ## Folder Structure
 
+    |--boilerplate
+        |-- scripts
+        |-- styles
+        |-- favicon.ico
+        |-- humans.txt
+        |-- index.html
+        |-- package.json
+        |-- references.md
 
-  |--boilerplate
-    |-- scripts
-    |-- styles
-    |-- favicon.ico
-    |-- humans.txt
-    |-- index.html
-    |-- package.json
-    |-- references.md
 
 `|-- scripts` contains ALL javascript files.
 
@@ -65,7 +65,6 @@ Test all elements in template
 Test for Accessibility
 Print SCSS
 Check all code against coding standards (not yet written)
-
 
 
 
