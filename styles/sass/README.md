@@ -2,10 +2,10 @@
 
 ##Folder Structure
 
-  |-- SASS
-  |   |-- _base.scss
-  |   |-- _grid.scss
-  |   |-- global.scss
+    |-- SASS
+    |   |-- _base.scss
+    |   |-- _grid.scss
+    |   |-- global.scss
 
 
 `|   |-- _base.scss` contains variables for colour, fonts and spacing used in the site.
