@@ -1,18 +1,18 @@
 #Scripts folder
 
 ##Folder Structure
-
-  |-- scripts
-  |  |-- libs
-  |  |  |-- min
-  |  |  |  |-- release.min.js
-  |  |  |-- modernizr.latest.js
-  |  |  |-- selectivizr.js
-  |  |-- plugins
-  |  |  |-- jquery.validate.js
-  |  |  |-- jquery.zone.plugin.0.1.js
-  |  |-- app.js
-  |  |-- base.js
+    
+    |-- scripts
+    |  |-- libs
+    |  |  |-- min
+    |  |  |  |-- release.min.js
+    |  |  |-- modernizr.latest.js
+    |  |  |-- selectivizr.js
+    |  |-- plugins
+    |  |  |-- jquery.validate.js
+    |  |  |-- jquery.zone.plugin.0.1.js
+    |  |-- app.js
+    |  |-- base.js
 
 All javascript files go in here.
 
@@ -39,5 +39,4 @@ eg: `jquery.zone.plugin.0.1.js`
 And anything else usefull for all of our projects
 
 Plugins we write specific to this project should be stored with the framework prefix (most probably jquery) and the name and if necessary the version.
-
 
