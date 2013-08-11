@@ -4,15 +4,26 @@
 
     |-- SASS
     |   |-- _base.scss
+    |   |-- _forms.scss
     |   |-- _grid.scss
+    |   |-- _styles.scss
+    |   |-- _typography.scss
+    |   |-- _utilities.scss
     |   |-- global.scss
 
 
 `|   |-- _base.scss` contains variables for colour, fonts and spacing used in the site.
 
+`|   |-- _forms.scss` contains basic form styles. Add all generic form styles here.
 
 `|   |-- _grid.scss` contains the semantic grid used for Responsive web builds.
 **needs fixing** to have push and pull classes work with right and left positioning rather than margins.
+
+`|   |-- _styles.scss` is a place to create all graphical and animatory devices for the site. Create as mixins and extendable classes. This file should not contain any styles in context. It's merely where all site styles are held.
+
+`|   |-- typography.scss` contains all base-level typographic classes. Amend globally here, change in context as neccessary within your own created imported files.
+
+`|   |-- utilities.scss` contains mixins that are not available in compass that help in construction. They should be generic to any site really.
 
 `|   |-- global.scss` references all the files it needs to compile the screen css.
 **This file is only used to import other files**
