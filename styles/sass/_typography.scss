@@ -27,9 +27,9 @@ body {
 // -------------------------------------------------------------------------------- 
 // ---------- RTE Content ---------------------------------------------------------
 // --------------------------------------------------------------------------------
-// This is content added to the site through a Rich Text Editor
+// This is content added to the site through a Rich Text Editor (Wordpress uses entry-content)
 
-.rte {
+.entry-content {
 
   h1 {@extend %heading_2}
 

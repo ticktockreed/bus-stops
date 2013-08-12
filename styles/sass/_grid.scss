@@ -46,7 +46,6 @@ $total-width: 100%;
 
 body {
 	width: 100%;
-	@include clearfix();
 }
 @mixin row($columns:$columns) {
 	display: block;
