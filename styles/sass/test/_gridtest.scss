@@ -1,0 +1,102 @@
+
+// Grid Test
+
+// $author                    Zone
+// $url                       http://www.thisiszone.com/
+// $copyright                 Copyright (c) 2012, thisiszone.com. All rights reserved.
+// $version                   1.0
+
+// Styles for the Grid test page. Nested example as below
+
+
+// Useful Extensions --------------------------------------------------------------
+%columnblock {
+  height: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 1em 0;
+}
+%annotation {
+    position: absolute;
+    display: block;
+    width: auto;
+    background: rgba(white, 0.9);
+    padding: 0 0.5em;
+}
+
+
+// Column styles ------------------------------------------------------------------
+.column9 {
+  @include column(9);
+  background: rgba(green, 0.2);
+  position: relative;
+  margin-bottom: 4em;
+
+  .label {
+    top: 0.5em;
+    right: 0;
+    margin-right: 0;
+    z-index: 99999;
+    @extend %annotation;
+
+
+    text-align: right;
+    color: rgba(green, 0.6);
+  }
+}
+.column3 {
+  @include column(3);
+  background: rgba(#f0f0f0, 0.8);
+  @extend %columnblock;
+  height: 12em;
+}
+.row9 {
+  @include row(9);
+  position: relative;
+  padding-top: 1em;
+  outline: 2px solid rgba(red, 0.2);
+  border-top: 1em solid white;
+  border-bottom: 1em solid white;
+
+  .label {
+    @extend %annotation;
+    top: -1.66em;
+    left: 0;
+    color: rgba(red, 0.6);
+  }
+}
+
+// Row styles ---------------------------------------------------------------------
+.row9 > .column3 {
+  @include column(3, 9);
+  background: rgba(#f0f0f0, 0.8);
+  @extend %columnblock;
+}
+.row9 > .column9 {
+  @include column(9, 9);
+  background: rgba(#f0f0f0, 0.8);
+  @extend %columnblock;
+  &:before {display: none;}
+}
+.fullwidth {
+  @include column(12);
+}
+.container {
+  max-width: 1600px;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+// Rudimentary heading styles -----------------------------------------------------
+h1,h2,h3,h4, h5, h6 {
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+// Push Pull ----------------------------------------------------------------------
+.push3 {
+  @include push(3);
+}
+.pull9 {
+  @include pull(9);
+}

@@ -62,6 +62,7 @@ body {
 	width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
 	margin-left: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
 	margin-right: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+  position: relative;
 	// *width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns))-$correction;
 	// *margin: 0 $total-width*(($gutter-width*.5)/gridsystem-width($columns))-$correction;
 }
@@ -73,8 +74,8 @@ body {
 // Move grid items right or left relative to its current position
 
 @mixin push($offset:1) {
-	margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+	left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns));
 }
 @mixin pull($offset:1) {
-	margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+	right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns));
 }
