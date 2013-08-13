@@ -114,8 +114,8 @@ a * {
   /* 
   *  Fix for IE7 stretched images (basically it
   *  makes images not look rubbish when streteched) 
-  */
-  -ms-interpolation-mode: bicubic;
+*/
+-ms-interpolation-mode: bicubic;
 }
 
 hr {
