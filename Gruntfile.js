@@ -3,85 +3,85 @@ module.exports = function(grunt) {
 
 // Project configuration.
 grunt.initConfig({
-  pkg: grunt.file.readJSON('package.json'),
-  jshint: {
-    options: {
-      curly: true,
-      eqeqeq: true,
-      eqnull: true,
-      browser: true,  
-      globals: {
-        jQuery: true
-      }
+    pkg: grunt.file.readJSON('package.json'),
+    jshint: {
+        options: {
+            curly: true,
+            eqeqeq: true,
+            eqnull: true,
+            browser: true,  
+            globals: {
+                jQuery: true
+            }
+        },
+        all: [
+        'Gruntfile.js', 
+        'scripts/*.js', 
+        'scripts/plugins/*.js', 
+        '!scripts/libs/*.js', 
+        '!scripts/google-analytics-tracking.js', 
+        '!scripts/release.js', 
+        '!scripts/*.min.js'
+        ]
     },
-    all: [
-      'Gruntfile.js', 
-      'scripts/*.js', 
-      'scripts/plugins/*.js', 
-      '!scripts/libs/*.js', 
-      '!scripts/google-analytics-tracking.js', 
-      '!scripts/release.js', 
-      '!scripts/*.min.js'
-    ]
-  },
-  concat: {
-    options: {
-      separator: ' ',
-      stripBanners: true,
-      banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %> */'
+    concat: {
+        options: {
+            separator: ' ',
+            stripBanners: true,
+            banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+            '<%= grunt.template.today("yyyy-mm-dd") %> */'
+        },
+        prod: {
+            src: ['scripts/base.js', 'scripts/app.js'],
+            dest: 'scripts/min/release.min.js'
+        }
     },
-    prod: {
-      src: ['scripts/base.js', 'scripts/app.js'],
-      dest: 'scripts/min/release.min.js'
-    }
-  },
-  uglify: {
-    options: {
-      banner: '/*! \n' + 
-        'Project: <%= pkg.title %> \n' +
-        'Version: v<%= pkg.version %> \n' +
-        'Date compiled: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
-        'Company: <%= pkg.company %> \n' +
-        'Contributors: <%= pkg.contributors %> \n' +
-        '*/ \n \n'
+    uglify: {
+        options: {
+            banner: '/*! \n' + 
+            'Project: <%= pkg.title %> \n' +
+            'Version: v<%= pkg.version %> \n' +
+            'Date compiled: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
+            'Company: <%= pkg.company %> \n' +
+            'Contributors: <%= pkg.contributors %> \n' +
+            '*/ \n \n'
+        },
+        my_target: {
+            files: {
+                'scripts/min/release.min.js': 'scripts/min/release.min.js'
+            }
+        }
     },
-    my_target: {
-      files: {
-        'scripts/min/release.min.js': 'scripts/min/release.min.js'
-      }
-    }
-  },
-  watch: {
-    files: ['<%= jshint.all %>', 'styles/sass/*.scss', 'styles/sass/test/*.scss'], // we watch the sass directory (not the file)
-    tasks: ['default']
-  },
-  compass: {
-    prod: {                   
-      options: {              
-        sassDir: 'styles/sass/',
-        cssDir: 'styles/css/min/',
-        environment: 'production'
-      }
+    watch: {
+        files: ['<%= jshint.all %>', 'styles/sass/*.scss', 'styles/sass/test/*.scss'], // we watch the sass directory (not the file)
+        tasks: ['default']
     },
-    dev: {            
-      options: {
-        sassDir: 'styles/sass/',
-        cssDir: 'styles/css/'
-      }
+    compass: {
+        prod: {                   
+            options: {              
+                sassDir: 'styles/sass/',
+                cssDir: 'styles/css/min/',
+                environment: 'production'
+            }
+        },
+        dev: {            
+            options: {
+                sassDir: 'styles/sass/',
+                cssDir: 'styles/css/'
+            }
+        }
+    },
+    webfont: {
+        icons: {
+            src: 'styles/fonts/icon-font/SVG/*.svg',
+            dest: 'styles/fonts/icon-font/',
+            destCss: 'styles/sass/',
+            options: {
+                stylesheet: 'scss',
+                font: 'site-name'
+            }
+        }
     }
-  },
-  webfont: {
-    icons: {
-      src: 'styles/fonts/icon-font/SVG/*.svg',
-      dest: 'styles/fonts/icon-font/',
-      destCss: 'styles/sass/',
-      options: {
-        stylesheet: 'scss',
-        font: 'site-name'
-      }
-    }
-  }
 });
 
 grunt.loadNpmTasks('grunt-contrib-watch');

@@ -13,10 +13,10 @@
 
 // Extendable classes (not to be compiled)
 %heading_1 {
-	font: $font-heading;
+    font: $font-heading;
 }
 %heading_2 {
-  font: $font-heading;
+    font: $font-heading;
 }
 
 // -------------------------------------------------------------------------------- 
@@ -36,7 +36,7 @@
 // Compatible in IE6+, Firefox 2+, Safari 4+.
 
 %transition-cubic-bezier-border {
-  @include transition-property(border);
-  @include transition-duration(350ms);
-  @include transition-timing-function(cubic-bezier(0.5, 0,0.5, 1));
+    @include transition-property(border);
+    @include transition-duration(350ms);
+    @include transition-timing-function(cubic-bezier(0.5, 0,0.5, 1));
 }
