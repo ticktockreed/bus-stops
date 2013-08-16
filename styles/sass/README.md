@@ -34,6 +34,9 @@
 _______
 ## Notes
 
+NB: If you want fancy ASCII art headings to divide your content use this (append your text to the end of the URL):
+http://www.network-science.de/ascii/ascii.php?x=21&y=10&FONT=univers&RICH=no&FORM=left&STRE=yes&WIDT=800&TEXT=History
+
 NB: All files but global.scss are prefixed with an underscore (eg: `_base.scss`) - this is so that they are not compiled with the `watch` command.
 
 NB: when creating new variables in SASS make sure they are namespaced such that names are hierarchical. For instance `$color-grey-dark` **not** `$color-dark-grey`
