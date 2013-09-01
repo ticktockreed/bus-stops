@@ -45,7 +45,7 @@ var app;
 
     firstFunction: function firstFunctionFn() {
 
-      console.log('%cWelcome to the Zone Front End Boilerplate - This message proves that the first function is running', base.CONSTANTS.LOGSTYLE_INFO);
+      console.log('%cWelcome to the Zone Front End Boilerplate', base.CONSTANTS.LOGSTYLE_INFO);
 
     }
 

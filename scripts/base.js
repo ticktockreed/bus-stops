@@ -20,7 +20,7 @@ base = {
     /* base */
     ALERT_FALLBACK: false,
     HTML_SNIPPETS_URL: '/scripts/snippets.html',
-    LOGSTYLE_INFO:  'background-color: #c5c5f4; padding: 10px; line-height: 3em; font-family: Arial,sans-serif; font-size: 1.1em;'
+    LOGSTYLE_INFO:  'color: #ee3d96; padding: 10px; line-height: 3em; font-family: Arial,sans-serif; font-size: 1.1em;'
 
   },
 

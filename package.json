@@ -9,7 +9,8 @@
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-watch": "~0.5.1",
     "grunt-webfont": "~0.1.5",
-    "grunt-contrib-compass": "~0.5.0"
+    "grunt-contrib-compass": "~0.5.0",
+    "grunt-contrib-requirejs": "~0.4.1"
   },
   "contributors": [
     " Your Name",

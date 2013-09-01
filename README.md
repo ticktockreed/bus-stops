@@ -26,46 +26,35 @@
 
 ** Please view README.md files within each folder for more info **
 
-## Setting up the project
- contains all the dependencies you'll need to  develop locally. 
 
 **If you are the first to work on this project**
 
 1. Change the Project details in `|-- package.json`
 2. Add your name to `|-- humans.txt`
-3. Run `npm install --save-dev`
 
 **If this has already been set up**
 
 1. Add your name to the project in `|-- package.json`
 2. Add your name to `|-- humans.txt`
-3. Run `npm install`
 
-_____
+## Setting up the project
 
+|-- package.json is set to install the latest module versions compatible with grunt~0.4.1.
 
-**Version 0.1.0 Release Notes**
-add Release notes and to do
-Sass & Compass
-Semantic grid
-Reset method 
-Gruntfile with the watch task installed
-Grunt webfonts
-Modernizr
-Scripts folder with /lib, /plugins, main.js
-Empty index file (Maybe some dummy placeholder content?)
-Then maybe some extra options for the more advanced version:
-Twitter bootstrap
-Grid selection (Fixed, fluid)
-Code follows first draft of coding standards (not yet written)
+*Run (in this directory)*
 
-**To Do**
-Font awesome
-Test all elements in template
-Test for Accessibility
-Print SCSS
-Check all code against coding standards (not yet written)
+    npm install --save-dev 
 
+This will install all the node modules you require. The flag `--save-dev` will save the version number to package.json so that everyone has the same versions.
 
+*Run* 
+
+    bower install
+
+This will install all the required lib dependencies.
+
+*To begin working on the project run*
+
+    grunt watch 
 
 
