@@ -8,8 +8,8 @@
 
 
 body {
-  font: normal normal 16px/1.2em $font-copy;
-  color: $color-text;
+    font: normal normal 16px/1.2em $font-copy;
+    color: $color-text;
 }
 
 
@@ -18,7 +18,7 @@ body {
 // -------------------------------------------------------------------------------- 
 
 .pageheading {
-  @extend %heading_1;
+    @extend %heading_1;
 }
 .articleheading {
 //...
@@ -27,11 +27,11 @@ body {
 // -------------------------------------------------------------------------------- 
 // ---------- RTE Content ---------------------------------------------------------
 // --------------------------------------------------------------------------------
-// This is content added to the site through a Rich Text Editor
+// This is content added to the site through a Rich Text Editor (Wordpress uses entry-content)
 
-.rte {
+.entry-content {
 
-  h1 {@extend %heading_2}
+    h1 {@extend %heading_2}
 
 }
 
@@ -41,10 +41,10 @@ body {
 // -------------------------------------------------------------------------------- 
 
 p {
-  //...
+//...
 }
 p img {
-  //...
+//...
 }
 
 
@@ -53,13 +53,13 @@ p img {
 // --------------------------------------------------------------------------------
 
 em {
-  font-style: italic;
+    font-style: italic;
 }
 strong {
-  font-weight: 800;
+    font-weight: 800;
 }
 small {
-  font-size: 80%;
+    font-size: 80%;
 }
 
 
@@ -68,19 +68,19 @@ small {
 // -------------------------------------------------------------------------------- 
 
 blockquote  {
-  color: $color-indigo; 
-  position: relative;
+    color: $color-indigo; 
+    position: relative;
 }
 blockquote p {
 }
 hr {
-  border: solid $color-text;
-  border-width: 1px 0 0;
-  clear: both;
-  height: 0;
+    border: solid $color-text;
+    border-width: 1px 0 0;
+    clear: both;
+    height: 0;
 }
 br {
-  height: 0;
+    height: 0;
 }
 
 
@@ -89,40 +89,40 @@ br {
 // -------------------------------------------------------------------------------- 
 
 *:focus {
-  @include box-shadow;
+    @include box-shadow;
 }
 .ie *:focus {
-  outline: 1px dotted black;
+    outline: 1px dotted black;
 }
 
 a {
-  color: $color-link;
-  @extend %transition-cubic-bezier-border;
+    color: $color-link;
+    @extend %transition-cubic-bezier-border;
 }
 a:active {
-  color: $color-link;
+    color: $color-link;
 }
 a:hover {
-  text-decoration: underline; 
-  outline: 0 none;
+    text-decoration: underline; 
+    outline: 0 none;
 }
 a * {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .ie7 img {
-  /* 
-  *  Fix for IE7 stretched images (basically it
-  *  makes images not look rubbish when streteched) 
-  */
-  -ms-interpolation-mode: bicubic;
+/* 
+*  Fix for IE7 stretched images (basically it
+*  makes images not look rubbish when streteched) 
+*/
+-ms-interpolation-mode: bicubic;
 }
 
 hr {
-  height: 0px;
+    height: 0px;
 }
 p {
-  margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 // -------------------------------------------------------------------------------- 
@@ -133,23 +133,23 @@ p {
 // see http://coding.smashingmagazine.com/2008/08/13/top-10-css-table-designs/ 
 
 table {
-  //...
-  
-  tbody {
-    //...
-  }
-  
-  thead {
-    //...
-  }
-  
-  thead td, th {
-    //...
-  }
-  
-  td {
-    //...
-  }    
+//...
+
+tbody {
+//...
+}
+
+thead {
+//...
+}
+
+thead td, th {
+//...
+}
+
+td {
+//...
+}    
 }
 
 

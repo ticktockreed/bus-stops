@@ -2,59 +2,56 @@
 var app;
 
 (function ($) {
-  "use strict";
+    "use strict";
 
 
-  app = {
+    app = {
 
-      /* CONSTANTS
-  ----------------------------------------------------------------------------- */
+        /* CONSTANTS
+        ----------------------------------------------------------------------------- */
 
-      CONSTANTS: {
+        CONSTANTS: {
 
         // Place sitewide global variables here
 
-      },
+        },
 
-      animation : {
+        animation : {
 
         // Place common animation variables here - eg speed, easing etc.
+
+        },
+
+        /* FUNCTIONS
+
+        ----------------------------------------------------------------------------- */
+
+
+
+        init: function initFn() {
+
+            app.firstFunction();
+
+        },
+
+        /*
+        *   firstFunction // example
+        *   ---------------------------------------------
+        *   Show in console that script is running correctly
+        *   with specific console styling
+        *   ---------------------------------------------
+        *   @param n/a
+        *   @return Void
+        */
+
+        firstFunction: function firstFunctionFn() {
+
+            console.log('%cWelcome to the Zone Front End Boilerplate', base.CONSTANTS.LOGSTYLE_INFO);
         
-      },
+        }
 
-      /* FUNCTIONS
- 
-  ----------------------------------------------------------------------------- */
+    };
 
-    /*
-    *   init
-    *   ---------------------------------------------
-    *   Start scripts
-    *   ---------------------------------------------
-    *   @param n/a
-    *   @return Void
-    */
-    
-    init: function initFn() {
+    app.init();
 
-      app.firstFunction();
-
-    },
-
-
-
-    firstFunction: function firstFunctionFn() {
-
-      console.log('%cWelcome to the Zone Front End Boilerplate', base.CONSTANTS.LOGSTYLE_INFO);
-
-    }
-
-  };
-
-
-  $(function() {
-
-      app.init();
-
-  });
 })(jQuery);
