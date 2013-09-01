@@ -1,8 +1,7 @@
 /**
 * base JavaScript Object
 *
-* @author  Dominic da Costa @ base
-* @email   ddacosta@zonecontent.com
+* @author  Zone
 * @url     http://www.zonecontent.com/
 * @copyright   Copyright (c) 2012, zonecontent.com. All rights reserved.
 * @version 1.0.0

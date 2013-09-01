@@ -1,12 +1,17 @@
 # Release Notes
 
 **Version 0.1.1 Release Notes**
+
+*Aims:*
+1. Add Bower
+2. Add Require JS
+
 * Move release notes to this file
 * Add bower.json
 * Remove `scripts/libs`
 * Update README.md with Bower instructions
 * Remove google analytics tracking
-
+* Compile bower.json files in production build
 
 **Version 0.1.0 Release Notes**
 * add Release notes and to do
@@ -30,7 +35,7 @@
 * Print SCSS
 * Check all code against coding standards (not yet written)
 * Add Bower
-
+* Add 
 
 
 

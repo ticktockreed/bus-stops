@@ -5,3 +5,4 @@ node_modules/
 .sass-cache/
 scripts/min/*.js
 bower_components/
+release.js

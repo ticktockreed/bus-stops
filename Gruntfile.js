@@ -17,25 +17,23 @@ grunt.initConfig({
         all: [
         'Gruntfile.js', 
         'scripts/*.js', 
-        'scripts/plugins/*.js', 
-        '!scripts/libs/*.js', 
-        '!scripts/google-analytics-tracking.js', 
-        '!scripts/release.js', 
+        'scripts/plugins/*.js',
+        '!scripts/release.js',
         '!scripts/*.min.js'
         ]
     },
-    concat: {
-        options: {
-            separator: ' ',
-            stripBanners: true,
-            banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-            '<%= grunt.template.today("yyyy-mm-dd") %> */'
-        },
-        prod: {
-            src: ['scripts/base.js', 'scripts/app.js'],
-            dest: 'scripts/min/release.min.js'
+    requirejs: {
+        app: {
+            options: {
+                findNestedDependencies: true,
+                baseUrl: 'scripts/',
+                name: 'app',
+                out: 'scripts/release.js',
+                optimize: 'none'
+            }
         }
     },
+    // Uglify has been kept purely to add banners to production code.
     uglify: {
         options: {
             banner: '/*! \n' + 
@@ -88,6 +86,7 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-compass');
+grunt.loadNpmTasks('grunt-contrib-requirejs');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-webfont');
 
