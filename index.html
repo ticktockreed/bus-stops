@@ -3,7 +3,7 @@
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
@@ -12,17 +12,18 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="styles/css/global.css">
-
-    <!-- Replace modernizr.latest with a custom build that only contains required tests -->
+    <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
+
     <!--[if lt IE 8]>
-        <script src="bower_components/selectivizr/selectivizr.js"></script>
+        <script src="bower_components/modernizr/selectivizr.js"></script>
     <![endif]-->
 
-  </head>
-  <body>
-    
+    <link rel="stylesheet" href="styles/css/global.css">
+
+</head>
+<body>
+
     <div class="container">
         <div class="fullwidth">
             <h1 class="pageheading">Welcome to the Zone Boilerplate</h1>
@@ -30,9 +31,8 @@
         </div>
     </div>
 
-    <script src="bower_components/jquery/jquery.js"></script>
 
-    <script data-main="scripts/release" src="scripts/require.js"></script>
+    <script data-main="scripts/config" src="bower_components/requirejs/require.js"></script>
 
-  </body>
+</body>
 </html>

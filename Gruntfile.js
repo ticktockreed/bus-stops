@@ -6,31 +6,41 @@ grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
         options: {
+            node: true,
+            browser: true,
+            esnext: true,
+            bitwise: true,
+            camelcase: true,
             curly: true,
             eqeqeq: true,
-            eqnull: true,
-            browser: true,  
+            immed: true,
+            indent: 4,
+            latedef: true,
+            newcap: true,
+            noarg: true,
+            quotmark: "double",
+            regexp: true,
+            undef: true,
+            unused: true,
+            strict: true,
+            trailing: true,
+            smarttabs: true,
+            jquery: true,
             globals: {
                 jQuery: true
             }
         },
         all: [
-        'Gruntfile.js', 
-        'scripts/*.js', 
+        //'Gruntfile.js',
+        'scripts/*.js',
         'scripts/plugins/*.js',
         '!scripts/release.js',
         '!scripts/*.min.js'
         ]
     },
-    requirejs: {
-        app: {
-            options: {
-                findNestedDependencies: true,
-                baseUrl: 'scripts/',
-                name: 'app',
-                out: 'scripts/release.js',
-                optimize: 'none'
-            }
+    bower: {
+        target: {
+            rjsConfig: 'scripts/config.js'
         }
     },
     // Uglify has been kept purely to add banners to production code.
@@ -51,7 +61,7 @@ grunt.initConfig({
         }
     },
     watch: {
-        files: ['<%= jshint.all %>', 'styles/sass/*.scss', 'styles/sass/test/*.scss'], // we watch the sass directory (not the file)
+        files: ['<%= jshint.all %>', 'styles/sass/*.scss', 'styles/sass/test/*.scss', '!scripts/main.js'], // we watch the sass directory (not the file)
         tasks: ['default']
     },
     compass: {
@@ -86,11 +96,12 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-compass');
+grunt.loadNpmTasks('grunt-bower-requirejs');
 grunt.loadNpmTasks('grunt-contrib-requirejs');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-webfont');
 
-grunt.registerTask('default', ['compass:dev' , 'jshint']);
+grunt.registerTask('default', ['compass:dev']);
 grunt.registerTask('prod', ['compass' , 'concat', 'jshint', 'uglify']);
 
 };
