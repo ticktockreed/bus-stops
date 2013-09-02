@@ -1,54 +1,34 @@
+define(['globals', 'base'], function(globals) {
+    'use strict';
 
-// var app;
+    var app = {
 
-
-//     app = {
-
-//         console.log('App.js Loaded!');
-        
-//         /* CONSTANTS
-//         ----------------------------------------------------------------------------- */
-
-//         CONSTANTS: {
-
-//         // Place sitewide global variables here
-
-//         },
-
-//         animation : {
-
-//         // Place common animation variables here - eg speed, easing etc.
-
-//         },
-
-//         /* FUNCTIONS
-
-//         ----------------------------------------------------------------------------- */
+        logstyleInfo: globals.logstyleInfo,
 
 
+        init: function initFn() {
 
-//         init: function initFn() {
+            this.firstFunction();
 
-//             app.firstFunction();
+        },
 
-//         },
+        /*
+         *   firstFunction // example
+         *   ---------------------------------------------
+         *   Show in console that script is running correctly
+         *   with specific console styling
+         *   ---------------------------------------------
+         *   @param n/a
+         *   @return Void
+         */
 
-//         /*
-//         *   firstFunction // example
-//         *   ---------------------------------------------
-//         *   Show in console that script is running correctly
-//         *   with specific console styling
-//         *   ---------------------------------------------
-//         *   @param n/a
-//         *   @return Void
-//         */
+        firstFunction: function firstFunctionFn() {
 
-//         firstFunction: function firstFunctionFn() {
+            console.log('%cWelcome to the Zone Front End Boilerplate', this.logstyleInfo);
 
-//             console.log('%cWelcome to the Zone Front End Boilerplate', base.CONSTANTS.LOGSTYLE_INFO);
-        
-//         }
+        }
 
-//     };
+    };
 
-//     return  app;
+    return app;
+});

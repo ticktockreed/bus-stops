@@ -13,6 +13,7 @@
 
 
 (function($) {
+    'use strict';
 
     $.fn.ourPulgin = function() {
 
@@ -22,11 +23,6 @@
 
             // Variables such as
             // var $block = $(this);
-
-            // Initialise the plugin
-            //+------------------------------------------------------------------------+
-
-            initGridList();
 
             //+------------------------------------------------------------------------+
 
@@ -41,6 +37,11 @@
                 // get it to do something
 
             }
+
+            // Initialise the plugin
+            //+------------------------------------------------------------------------+
+
+            initGridList();
 
         });
 

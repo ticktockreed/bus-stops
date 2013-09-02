@@ -18,7 +18,7 @@ grunt.initConfig({
             latedef: true,
             newcap: true,
             noarg: true,
-            quotmark: "double",
+            quotmark: "single",
             regexp: true,
             undef: true,
             unused: true,
@@ -26,8 +26,12 @@ grunt.initConfig({
             trailing: true,
             smarttabs: true,
             jquery: true,
+            devel: true,
             globals: {
-                jQuery: true
+                jQuery: true,
+                require: true,
+                define: true,
+                Modernizr: true,
             }
         },
         all: [
@@ -101,7 +105,7 @@ grunt.loadNpmTasks('grunt-contrib-requirejs');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-webfont');
 
-grunt.registerTask('default', ['compass:dev']);
+grunt.registerTask('default', ['compass:dev', 'jshint']);
 grunt.registerTask('prod', ['compass' , 'concat', 'jshint', 'uglify']);
 
 };
