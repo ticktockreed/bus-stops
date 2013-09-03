@@ -8,8 +8,6 @@ define(['globals'], function(globals) {
             this.placeholderFallback();
             this.outerhtmlFallback();
             this.loadHtmlSnippets();
-            console.log('%c' + globals.htmlSnippetsURL, globals.logstyleInfo);
-            console.log(globals.htmlSnippets);
         },
 
         /* Define console.log */

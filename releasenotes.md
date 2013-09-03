@@ -5,7 +5,7 @@
 *Aims:*
 1. Add Bower
 2. Add Require JS
-3. Provide better testing 
+3. Provide better automated testing 
 
 * Move release notes to this file
 * Add bower.json
@@ -39,6 +39,7 @@
 * Check all code against coding standards (not yet written)
 * Add Bower
 * Compile bower.json files in production build
+* Add PNG/JPG/SVG optimizer
 
 
 

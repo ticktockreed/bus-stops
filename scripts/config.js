@@ -7,9 +7,9 @@ require.config({
 });
 
 // Start the main app logic.
-require(['jquery', 'globals', 'base', 'app'], function($, globals, base, app) {
+require(['jquery', 'globals', 'base', 'testmodule'], function($, globals, base, testmodule) {
     'use strict';
 
     base.init();
-    app.init();
+    testmodule.init();
 });

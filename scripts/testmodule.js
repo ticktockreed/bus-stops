@@ -1,7 +1,7 @@
 define(['globals', 'base'], function(globals) {
     'use strict';
 
-    var app = {
+    var testmodule = {
 
 
         init: function initFn() {
@@ -28,5 +28,5 @@ define(['globals', 'base'], function(globals) {
 
     };
 
-    return app;
+    return testmodule;
 });
