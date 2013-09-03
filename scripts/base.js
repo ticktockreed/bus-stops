@@ -3,18 +3,13 @@ define(['globals'], function(globals) {
 
     var base = {
 
-        alertFallback: globals.alertFallback,
-        htmlSnippetsURL: globals.htmlSnippetsURL,
-        htmlSnippets: '',
-        logstyleInfo: globals.logstyleInfo,
-
         init: function() {
             this.defineConsoleLog();
             this.placeholderFallback();
             this.outerhtmlFallback();
             this.loadHtmlSnippets();
-            console.log('%c' + this.htmlSnippetsURL, this.logstyleInfo);
-            console.log(base.htmlSnippets);
+            console.log('%c' + globals.htmlSnippetsURL, globals.logstyleInfo);
+            console.log(globals.htmlSnippets);
         },
 
         /* Define console.log */
@@ -22,7 +17,7 @@ define(['globals'], function(globals) {
             if (typeof console === 'undefined' || typeof console.log === 'undefined') {
                 /*bases console:true*/
                 console = {};
-                if (this.alertFallback) {
+                if (globals.alertFallback) {
                     console.log = function(msg) {
                         alert(msg);
                     };
@@ -76,11 +71,11 @@ define(['globals'], function(globals) {
         /* Load HTML snippets */
         loadHtmlSnippets: function loadHtmlSnippets() {
             $.ajax({
-                url: this.htmlSnippetsURL,
+                url: globals.htmlSnippetsURL,
                 datatype: 'text/html',
                 async: false,
                 success: function(data) {
-                    base.htmlSnippets = data;
+                    globals.htmlSnippets = data;
                 }
             });
         }

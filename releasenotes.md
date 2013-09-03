@@ -5,13 +5,16 @@
 *Aims:*
 1. Add Bower
 2. Add Require JS
+3. Provide better testing 
 
 * Move release notes to this file
 * Add bower.json
 * Remove `scripts/libs`
 * Update README.md with Bower instructions
 * Remove google analytics tracking
-* Compile bower.json files in production build
+* Move global variables to seaparate module
+* Update jshint to check for camelCase and Single Quotes and 4 spaces, no tabs - to match our coding style
+* 
 
 **Version 0.1.0 Release Notes**
 * add Release notes and to do
@@ -35,7 +38,7 @@
 * Print SCSS
 * Check all code against coding standards (not yet written)
 * Add Bower
-* Add 
+* Compile bower.json files in production build
 
 
 

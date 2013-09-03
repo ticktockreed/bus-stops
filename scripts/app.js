@@ -3,8 +3,6 @@ define(['globals', 'base'], function(globals) {
 
     var app = {
 
-        logstyleInfo: globals.logstyleInfo,
-
 
         init: function initFn() {
 
@@ -24,7 +22,7 @@ define(['globals', 'base'], function(globals) {
 
         firstFunction: function firstFunctionFn() {
 
-            console.log('%cWelcome to the Zone Front End Boilerplate', this.logstyleInfo);
+            console.log('%cWelcome to the Zone Front End Boilerplate', globals.logstyleInfo);
 
         }
 
