@@ -11,3 +11,7 @@ Resources used to create this template
 [GitHub Styleguide](https://github.com/styleguide) - for Javascript/HTML/CSS coding standards
 
 [Inuit CSS](http://inuitcss.com/) - for BEM, OOCSS, SASS structure
+
+[RequireJS](http://requirejs.org/) - For asyncronous modular loading of javascript files, better structure and maintainability.
+
+[Bower](http://bower.io/) - Load library dependencies into your project with ease.

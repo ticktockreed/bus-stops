@@ -3,6 +3,8 @@
 ## Folder Structure
 
     |--boilerplate
+        |-- bower_components (not in repo)
+        |-- node_modules (not in repo)
         |-- scripts
         |-- styles
         |-- favicon.ico
@@ -12,11 +14,15 @@
         |-- references.md
 
 
-`|-- scripts` contains ALL javascript files.
+`|-- bower_components` contains all javascript library dependencies (e.g. jQuery).
+
+`|-- node_modules` all modules required for Grunt (this is added when setting up)
+
+`|-- scripts` contains our javascript files for this project.
 
 `|-- styles` contains all assets used in styling the site; CSS, SASS, SVG, images etc.
 
-`|-- favicon.ico` is the basic favicon for the site - don't forget it.
+`|-- favicon.ico` is the basic favicon for the site - **don't forget it**.
 
 `|-- humans.txt` tells us who has worked on the project, who helped, and what technologies were used.
 
@@ -24,37 +30,40 @@
 
 `|-- references.md` is a list of links researched to inform this template
 
-** Please view README.md files within each folder for more info **
 
+Note: Please view README.md files within each folder for more info
 
-**If you are the first to work on this project**
-
-1. Change the Project details in `|-- package.json`
-2. Add your name to `|-- humans.txt`
-
-**If this has already been set up**
-
-1. Add your name to the project in `|-- package.json`
-2. Add your name to `|-- humans.txt`
 
 ## Setting up the project
 
 |-- package.json is set to install the latest module versions compatible with grunt~0.4.1.
 
-*Run (in this directory)*
+*Run (in this directory):*
 
-    npm install --save-dev 
+    npm install
 
-This will install all the node modules you require. The flag `--save-dev` will save the version number to package.json so that everyone has the same versions.
+This will install all the node modules you require.
 
-*Run* 
+*Run (in this directory):* 
 
     bower install
 
-This will install all the required lib dependencies.
+This will install all the required library dependencies.
 
-*To begin working on the project run*
+*To begin working on the project run:*
 
     grunt watch 
 
 
+## Installing new packages
+
+**For new Grunt modules run:**
+
+	npm install <package name> --save-dev
+	
+The flag `--save-dev` will save the version number to package.json so that everyone has the same versions.
+
+**For new Bower components run:**
+
+	bower install <package>#<version> --save-dev 
+	
