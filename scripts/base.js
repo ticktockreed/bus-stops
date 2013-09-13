@@ -26,7 +26,7 @@ define(['globals'], function(globals) {
         },
 
         /* Placeholder fallback */
-        placeholderFallback: function placeholderFallback() {
+        placeholderFallback: function placeholderFallbackFn() {
             /*bases Modernizr:true*/
             if (!Modernizr.input.placeholder) {
                 $('[placeholder]').focus(function() {
@@ -51,7 +51,7 @@ define(['globals'], function(globals) {
             }
         },
 
-        outerhtmlFallback: function outerhtmlFallback() {
+        outerhtmlFallback: function outerhtmlFallbackFn() {
             $.fn.outerHTML = function() {
 
                 // IE, Chrome & Safari will comply with the non-standard outerHTML, all others (FF) will have a fall-back for cloning
@@ -67,7 +67,7 @@ define(['globals'], function(globals) {
         },
 
         /* Load HTML snippets */
-        loadHtmlSnippets: function loadHtmlSnippets() {
+        loadHtmlSnippets: function loadHtmlSnippetsFn() {
             $.ajax({
                 url: globals.htmlSnippetsURL,
                 datatype: 'text/html',

@@ -1,7 +1,6 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
-        selectivizr: '../bower_components/selectivizr/selectivizr',
         requirejs: '../bower_components/requirejs/require'
     }
 });

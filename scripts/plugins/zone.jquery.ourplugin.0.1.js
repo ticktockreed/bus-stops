@@ -35,7 +35,7 @@
             function aFunction() {
 
                 // get it to do something
-
+                console.log('A motherfuckin function!');
             }
 
             // Initialise the plugin

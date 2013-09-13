@@ -47,6 +47,20 @@ grunt.initConfig({
             rjsConfig: 'scripts/config.js'
         }
     },
+    requirejs: {
+        dist: {
+            // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
+            options: {
+                // `name` and `out` is set by grunt-usemin
+                baseUrl: 'scripts',
+                optimize: 'uglify',
+                dir: 'scripts/min',
+                preserveLicenseComments: false,
+                useStrict: true,
+                wrap: true
+            }
+        }
+    },
     // Uglify has been kept purely to add banners to production code.
     uglify: {
         options: {
@@ -98,7 +112,6 @@ grunt.initConfig({
 
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-jshint');
-grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-compass');
 grunt.loadNpmTasks('grunt-bower-requirejs');
 grunt.loadNpmTasks('grunt-contrib-requirejs');
@@ -106,6 +119,6 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-webfont');
 
 grunt.registerTask('default', ['compass:dev', 'jshint']);
-grunt.registerTask('prod', ['compass' , 'concat', 'jshint', 'uglify']);
+grunt.registerTask('prod', ['compass', 'jshint', 'uglify']);
 
 };
