@@ -1,4 +1,4 @@
-define(['globals', 'base'], function(globals, base) {
+define(['globals'], function(globals) {
     'use strict';
 
     var testmodule = {

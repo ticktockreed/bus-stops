@@ -310,7 +310,6 @@ p {
 
 /* line 29, ../sass/test/_gridtest.scss */
 .column9 {
-  display: inline;
   float: left;
   width: 72.91667%;
   margin-left: 1.04167%;
@@ -332,7 +331,6 @@ p {
 
 /* line 47, ../sass/test/_gridtest.scss */
 .column3 {
-  display: inline;
   float: left;
   width: 22.91667%;
   margin-left: 1.04167%;
@@ -373,7 +371,6 @@ p {
 
 /* line 70, ../sass/test/_gridtest.scss */
 .row9 > .column3 {
-  display: inline;
   float: left;
   width: 30.55556%;
   margin-left: 1.38889%;
@@ -384,7 +381,6 @@ p {
 
 /* line 75, ../sass/test/_gridtest.scss */
 .row9 > .column9 {
-  display: inline;
   float: left;
   width: 97.22222%;
   margin-left: 1.38889%;
@@ -399,7 +395,6 @@ p {
 
 /* line 81, ../sass/test/_gridtest.scss */
 .fullwidth {
-  display: inline;
   float: left;
   width: 97.91667%;
   margin-left: 1.04167%;

@@ -6,33 +6,7 @@ grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
         options: {
-            node: true,
-            browser: true,
-            esnext: true,
-            bitwise: true,
-            camelcase: true,
-            curly: true,
-            eqeqeq: true,
-            immed: true,
-            indent: 4,
-            latedef: true,
-            newcap: true,
-            noarg: true,
-            quotmark: "single",
-            regexp: true,
-            undef: true,
-            unused: true,
-            strict: true,
-            trailing: true,
-            smarttabs: true,
-            jquery: true,
-            devel: true,
-            globals: {
-                jQuery: true,
-                require: true,
-                define: true,
-                Modernizr: true,
-            }
+            jshintrc: '.jshintrc'
         },
         all: [
         //'Gruntfile.js',
@@ -43,6 +17,9 @@ grunt.initConfig({
         ]
     },
     bower: {
+        options: {
+            exclude: ['modernizr']
+        },
         target: {
             rjsConfig: 'scripts/config.js'
         }
@@ -51,46 +28,33 @@ grunt.initConfig({
         dist: {
             // Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
             options: {
-                // `name` and `out` is set by grunt-usemin
                 baseUrl: 'scripts',
                 optimize: 'uglify',
                 dir: 'scripts/min',
-                preserveLicenseComments: false,
                 useStrict: true,
                 wrap: true
             }
         }
     },
-    // Uglify has been kept purely to add banners to production code.
-    uglify: {
-        options: {
-            banner: '/*! \n' + 
-            'Project: <%= pkg.title %> \n' +
-            'Version: v<%= pkg.version %> \n' +
-            'Date compiled: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
-            'Company: <%= pkg.company %> \n' +
-            'Contributors: <%= pkg.contributors %> \n' +
-            '*/ \n \n'
+    watch: {
+        compass: {
+            files: ['styles/{,*/}*.{scss,sass}'],
+            tasks: ['compass:dev']
         },
-        my_target: {
-            files: {
-                'scripts/min/release.min.js': 'scripts/min/release.min.js'
-            }
+        jshint: {
+            files: ['scripts/{,*/}*.js'],
+            tasks: ['jshint']
         }
     },
-    watch: {
-        files: ['<%= jshint.all %>', 'styles/sass/*.scss', 'styles/sass/test/*.scss', '!scripts/main.js'], // we watch the sass directory (not the file)
-        tasks: ['default']
-    },
     compass: {
-        prod: {                   
+        prod: {
             options: {              
                 sassDir: 'styles/sass/',
                 cssDir: 'styles/css/min/',
                 environment: 'production'
             }
         },
-        dev: {            
+        dev: {
             options: {
                 sassDir: 'styles/sass/',
                 cssDir: 'styles/css/'
@@ -118,7 +82,7 @@ grunt.loadNpmTasks('grunt-contrib-requirejs');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-webfont');
 
-grunt.registerTask('default', ['compass:dev', 'jshint']);
-grunt.registerTask('prod', ['compass', 'jshint', 'uglify']);
+grunt.registerTask('default', ['bower', 'watch']);
+grunt.registerTask('prod', ['compass:prod', 'requirejs']);
 
 };
