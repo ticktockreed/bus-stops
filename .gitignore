@@ -6,3 +6,4 @@ node_modules/
 scripts/min/*.js
 bower_components/
 release.js
+scripts/min/
