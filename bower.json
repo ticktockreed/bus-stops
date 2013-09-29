@@ -5,6 +5,7 @@
     "jquery": "~1.10.2",
     "selectivizr": "~1.0.2",
     "modernizr": "~2.6.2",
-    "requirejs": "~2.1.8"
+    "requirejs": "~2.1.8",
+    "requirejs-google-maps": "*"
   }
 }

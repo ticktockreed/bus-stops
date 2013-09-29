@@ -1,7 +1,21 @@
 require.config({
     paths: {
-        jquery: '/bower_components/jquery/jquery',
-        requirejs: '/bower_components/requirejs/require'
+        jquery: '../bower_components/jquery/jquery',
+        requirejs: '../bower_components/requirejs/require',
+        'requirejs-domready': '../bower_components/requirejs-domready/domReady',
+        'requirejs-google-maps': '../bower_components/requirejs-google-maps/dist/GoogleMap',
+        selectivizr: '../bower_components/selectivizr/selectivizr',
+        async: '../bower_components/requirejs-plugins/src/async',
+        depend: '../bower_components/requirejs-plugins/src/depend',
+        font: '../bower_components/requirejs-plugins/src/font',
+        goog: '../bower_components/requirejs-plugins/src/goog',
+        image: '../bower_components/requirejs-plugins/src/image',
+        json: '../bower_components/requirejs-plugins/src/json',
+        mdown: '../bower_components/requirejs-plugins/src/mdown',
+        noext: '../bower_components/requirejs-plugins/src/noext',
+        propertyParser: '../bower_components/requirejs-plugins/src/propertyParser',
+        'Markdown.Converter': '../bower_components/requirejs-plugins/lib/Markdown.Converter',
+        text: '../bower_components/requirejs-plugins/lib/text'
     }
 });
 
