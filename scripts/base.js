@@ -1,4 +1,4 @@
-define(['globals'], function(globals) {
+define(['jquery', 'globals'], function($, globals) {
     'use strict';
 
     var base = {

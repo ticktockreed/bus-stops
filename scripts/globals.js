@@ -8,7 +8,8 @@ define(function () {
         htmlSnippets: '',
         
         animationSpeed: 350,
-        animationEasing: 'easeInOutQuad'
+        animationEasing: 'easeInOutQuad',
+        currentMarker: null
     };
 
 });

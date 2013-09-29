@@ -4,4 +4,13 @@ body {height: 100%; margin: 0; padding: 0}
 .container,
 .fullwidth {height: 100%;}
 
-#map-canvas { height: 100% }
+#map-canvas {
+    @include column(9);
+    height: 50%;
+}
+#departureboard {
+    @include column(3);
+    height: 50%;
+    background: black;
+    color: yellow;
+}
