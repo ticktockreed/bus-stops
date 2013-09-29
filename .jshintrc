@@ -24,6 +24,7 @@
         "jQuery": true,
         "require": true,
         "define": true,
-        "Modernizr": true
+        "Modernizr": true,
+        "google": true
     }
 }

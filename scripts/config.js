@@ -11,12 +11,12 @@ require.config({
 
 // Start the main app logic.
 require([
-        'jquery', 
-        'globals', 
-        'base', 
-        'testmodule',
-        'async!https://maps.googleapis.com/maps/api/js?key=AIzaSyCBmmsWRw46wR1_L_wyRv7DYxXWdGDKEAg&sensor=false'
-    ], function($, globals, base, testmodule) {
+    'jquery',
+    'globals',
+    'base',
+    'testmodule',
+    'async!https://maps.googleapis.com/maps/api/js?key=AIzaSyCBmmsWRw46wR1_L_wyRv7DYxXWdGDKEAg&sensor=false'
+], function($, globals, base, testmodule) {
     'use strict';
 
     base.init();
