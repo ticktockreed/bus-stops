@@ -25,19 +25,8 @@ define(['globals', 'async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor
 
         },
 
-        /*
-         *   initialiseMap // example
-         *   ---------------------------------------------
-         *   Show in console that script is running correctly
-         *   with specific console styling
-         *   ---------------------------------------------
-         *   @param n/a
-         *   @return Void
-         */
-
         initialiseMap: function initialiseMapFn() {
 
-            //console.log('%cWelcome to the Zone Front End Boilerplate', globals.logstyleInfo);
             this.listenSearch();
 
         },
@@ -52,7 +41,7 @@ define(['globals', 'async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor
                 }
 
                 map.fitBounds(bounds);
-                busMap.updateMap(bounds);
+                busMap.updateMap();
                 map.setZoom(17);
             });
         },
@@ -66,9 +55,9 @@ define(['globals', 'async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor
         },
 
         getBusStops: function(bounds) {
-                
-            var northEast = bounds.getNorthEast().lat() + ',' + bounds.getNorthEast().lng(),
-                southWest = bounds.getSouthWest().lat() + ',' + bounds.getSouthWest().lng();
+
+            var northEast = bounds.ea.b + ',' + bounds.ia.b,
+                southWest = bounds.ea.d + ',' + bounds.ia.d;
 
             console.log('northEast', northEast);
             console.log('southWest', southWest);
@@ -88,18 +77,7 @@ define(['globals', 'async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor
 
         },
 
-        clearBusStops: function() {
-            for (var i = 0; i < markers.length; i++) {
-                markers[i].setMap(null);
-            }
-            markers = [];
-        },
-
         createBusStops: function(busStops) {
-
-            console.log(busStops);
-            this.clearBusStops();
-            console.log(busStops);
 
             $.each(busStops, function() {
 
@@ -152,7 +130,7 @@ define(['globals', 'async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor
 
             $.each(busStopInfo.arrivals, function() {
 
-                var $busitem = $(globals.htmlSnippets).find('.bus');
+                var $busitem = $('<li class="bus"><span class="number"><span class="name">Number:</span><span class="info"></span></span><span class="destination"><span class="name">To:</span><span class="info"></span></span><span class="estimated-wait"><span class="name">Est Arr:</span><span class="info"></span></span></li>');
 
                 $busitem.find('.number .info').html(this.routeId);
                 $busitem.find('.destination .info').html(this.destination);

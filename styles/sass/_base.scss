@@ -13,14 +13,14 @@
 
 // Colour palette ----------------------------------------------------------------
 
-$color-indigo:                  #424297;
+$color-red:                     #dc222c;
 $color-magenta:                 #EE3D96;
 $color-grey-dark:               #323230;
 
 // Colour Context ----------------------------------------------------------------
 
 $color-text:                    $color-grey-dark;
-$color-heading:                 $color-indigo;
+$color-heading:                 $color-red;
 $color-link:                    $color-magenta;
 $color-link-hover:              $color-link;
 $color-link-visited:            $color-link;
@@ -30,7 +30,7 @@ $color-link-visited:            $color-link;
 // ---------- Fonts ---------------------------------------------------------------
 // -------------------------------------------------------------------------------- 
 
-$font-copy:                     helvetica,arial,clean,sans-serif;
+$font-copy:                     'Droid Sans', sans-serif;
 $font-heading:                  "Bliss Regular", 'Gill Sans', 'Helvetica Neue', Arial, sans-serif;
 
 

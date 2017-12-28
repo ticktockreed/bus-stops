@@ -4,6 +4,12 @@ module.exports = function(grunt) {
 // Project configuration.
 grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    serve: {
+        options: {
+            port: 9000,
+            'path': 'build/'
+        }
+    },
     jshint: {
         options: {
             jshintrc: '.jshintrc'
@@ -48,7 +54,7 @@ grunt.initConfig({
     },
     compass: {
         prod: {
-            options: {              
+            options: {
                 sassDir: 'styles/sass/',
                 cssDir: 'styles/css/min/',
                 environment: 'production'
@@ -77,6 +83,7 @@ grunt.initConfig({
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-contrib-compass');
+grunt.loadNpmTasks('grunt-serve');
 grunt.loadNpmTasks('grunt-bower-requirejs');
 grunt.loadNpmTasks('grunt-contrib-requirejs');
 grunt.loadNpmTasks('grunt-contrib-uglify');

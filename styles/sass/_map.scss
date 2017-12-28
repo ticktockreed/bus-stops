@@ -1,16 +1,45 @@
 html {height: 100%}
-body {height: 100%; margin: 0; padding: 0}
+body {height: 100%; margin: 0; padding: 0; background: $color-red;}
 
+.container {padding: 0 40px;}
 .container,
 .fullwidth {height: 100%;}
-
+div, span, input {@include box-sizing(border-box);}
+.header {background: #dcdcdc; height: auto; overflow: hidden; padding-top: 40px;}
+.header .fullwidth {height: auto;}
+.masthead {
+    @include column(12);
+}
+.search-panel {
+    @include column(12);
+    padding: 15px 0;
+}
+.search-panel .searchbox {
+    width: 100%;
+    padding: 15px;
+    border: solid 2px darken($color-red, 10%);
+    font-size: 1em;
+    font-weight: bold;
+    background: #ff6e6b;
+    color: white;
+    @include box-shadow(5px, 0, 0, white );
+}
 #map-canvas {
-    @include column(9);
-    height: 50%;
+    @include column(8);
+    height: 60%;
 }
 #departureboard {
-    @include column(3);
-    height: 50%;
-    background: black;
+    @include column(4);
+    height: 60%;
+    background: #171a1b;
     color: yellow;
+    padding: 15px 15px 15px;
 }
+.bus {list-style: none; padding: 0}
+.bus .name {display: none;}
+.bus .number,
+.bus .destination,
+.bus .estimated-wait {display: inline-block; vertical-align: top;}
+.bus .number {width: 20%}
+.bus .destination {width:50%}
+.bus .estimated-wait {width:26%; text-align: right;}

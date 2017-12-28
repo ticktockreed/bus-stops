@@ -18,14 +18,14 @@ input, textarea {
     padding: 3px 10px;
     border: 1px solid #cccccc;
     background: white;
-    color: $color-text;
+    color: white;
 
     @extend %box-model-border-box;
 }
 fieldset {
     margin-bottom: $spacing-vertical-small;
 }
-
+ ::-webkit-input-placeholder {color: white}
 
 // -------------------------------------------------------------------------------- 
 // ---------- Inputs -------------------------------------------------------------- 
@@ -54,7 +54,8 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border: 1px solid $color-text;
+    border-color: lighten($color-red, 10%);
+    outline: none;
 }
 
 // Checkbox and Radio Inputs ------------------------------------------------------
